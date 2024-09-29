@@ -1,6 +1,7 @@
 .global main
 
 .equ    IMAGE_SIZE,     10000
+.equ    IMP_IMAGE,     40000
 
 
 .section .data
@@ -11,8 +12,8 @@
     esquina_id      .word   0
 .section .bss
 
-    src_image:      .word    0
-    improved_image: .space   IMAGE_SIZE
+    src_image:      .word    IMAGE_SIZE
+    improved_image: .space   
 .section .text
 
 _start: 
@@ -32,8 +33,8 @@ loop_image:
 
     @offset adding
     mov r3, #0 
-    mul r4, r1, r2
-    add r3, r3, r4 @add chunk_counter*vertical_offset
+    mul r4, r2, #100
+    add r3, r1, r4 @add chunk_counter*vertical_offset
 
     @superior izquierda
     ldr r4, [r0, r3]
@@ -228,7 +229,9 @@ intr_matrx_calculation:
         pop{r0-r5, lr}
         bx lr
 matrix_2_image:
-    ldr r3, =improved_image
+    ldr r3, = IMP_IMAGE
+
+
 
 interpolation_for_nm:
     @r1=x1 posicion de esquina inicial
