@@ -26,14 +26,14 @@ loop_image:
     cmp r1, #100
     ble continue_loop
     mov r1, #0
-    add r2, #1
+    add r2, #2
     b loop_image
     continue_loop:
 
     @offset adding
     mov r3, #0 
-    add r3, r3, r1 @add chunk counter
-    add r3, r3, r2 @add vertical offset
+    mul r4, r1, r2
+    add r3, r3, r4 @add chunk_counter*vertical_offset
 
     @superior izquierda
     ldr r4, [r0, r3]
@@ -58,17 +58,183 @@ loop_image:
     str r5, =esquina_id
     str r4, [r5]
 
-    bl sides
-
-sides:
-    
+    bl intr_matrx_calculation
 
 
-interpolation_for_sides:
-    @r1=x1 posicion de esquina superior izquierda
-    @r2=x2 posición de esquina superior derecha
-    @r3=v1 valor de esquina superior izquierda
-    @r4=v2 valor de esquina superior derecha
+    add r1, r1, #2
+    b curr_2x2_row
+intr_matrx_calculation:
+    sides:
+        push{r0-r5, lr}
+        ldr r0, =interp_matrix
+
+        @position 2
+        mov r1, #1
+        mov r2, #4
+        ldr r3, esquina_si
+        ldr r4, esquina_sd
+        mov r5, #2
+
+        bl interpolation_for_nm
+
+        add r5, r5, #-1
+        str r1, [r0, r5]
+        
+        @position 3
+        mov r1, #1
+        mov r2, #4
+        ldr r3, esquina_si
+        ldr r4, esquina_sd
+        mov r5, #3
+
+        bl interpolation_for_nm
+
+        add r5, r5, #-1
+        str r1, [r0, r5]
+
+        @position 5
+        mov r1, #1
+        mov r2, #13
+        ldr r3, esquina_si
+        ldr r4, esquina_ii
+        mov r5, #5
+
+        bl interpolation_for_nm
+
+        add r5, r5, #-1
+        str r1, [r0, r5]
+
+        @position 9
+        mov r1, #1
+        mov r2, #13
+        ldr r3, esquina_si
+        ldr r4, esquina_ii
+        mov r5, #9
+
+        bl interpolation_for_nm
+
+        add r5, r5, #-1
+        str r1, [r0, r5]
+
+        @position 14
+        mov r1, #13
+        mov r2, #16
+        ldr r3, esquina_ii
+        ldr r4, esquina_id
+        mov r5, #14
+
+        bl interpolation_for_nm
+
+        add r5, r5, #-1
+        str r1, [r0, r5]
+
+        @position 15
+        mov r1, #13
+        mov r2, #16
+        ldr r3, esquina_ii
+        ldr r4, esquina_id
+        mov r5, #15
+
+        bl interpolation_for_nm
+
+        add r5, r5, #-1
+        str r1, [r0, r5]
+
+        @position 8
+        mov r1, #4
+        mov r2, #16
+        ldr r3, esquina_sd
+        ldr r4, esquina_id
+        mov r5, #8
+        bl interpolation_for_nm
+
+        add r5, r5, #-1
+        str r1, [r0, r5]
+
+        @position 12
+        mov r1, #4
+        mov r2, #16
+        ldr r3, esquina_sd
+        ldr r4, esquina_id
+        mov r5, #12
+        bl interpolation_for_nm
+
+        add r5, r5, #-1
+        str r1, [r0, r5]
+    interior:
+
+        @position 6
+        mov r1, #5
+        mov r2, #8
+        ldr r3, [r0, #4]
+        ldr r4, [r0, #7]
+        mov r5, #6
+        bl interpolation_for_nm
+
+        add r5, r5, #-1
+        str r1, [r0, r5]
+
+        @position 7
+        mov r1, #5
+        mov r2, #8
+        ldr r3, [r0, #4]
+        ldr r4, [r0, #7]
+        mov r5, #7
+        bl interpolation_for_nm
+
+        add r5, r5, #-1
+        str r1, [r0, r5]
+
+        @position 10
+        mov r1, #9
+        mov r2, #12
+        ldr r3, [r0, #8]
+        ldr r4, [r0, #11]
+        mov r5, #10
+        
+        add r5, r5, #-1
+        str r1, [r0, r5]
+
+        @position 11
+        mov r1, #9
+        mov r2, #12
+        ldr r3, [r0, #8]
+        ldr r4, [r0, #11]
+        mov r5, #11
+        
+        add r5, r5, #-1
+        str r1, [r0, r5]
+    esquinas:
+        @guarda posicion 1
+        ldr r1, =esquina_si
+        ldr r1, [r1]
+        str r1, [r0]
+
+        @guarda posicion 4
+        ldr r1, =esquina_sd
+        ldr r1, [r1]
+        str r1, [r0, #3]
+
+        @guarda posicion 13
+        ldr r1, =esquina_ii
+        ldr r1, [r1]
+        str r1, [r0, #12]
+
+        @guarda posicion 16
+        ldr r1, =esquina_id
+        ldr r1, [r1]
+        str r1, [r0, #15]
+
+        pop{r0-r5, lr}
+        bx lr
+matrix_2_image:
+    ldr r3, =improved_image
+
+interpolation_for_nm:
+    @r1=x1 posicion de esquina inicial
+    @r2=x2 posición de esquina final
+    @r3=v1 valor de esquina inicial
+    @r4=v2 valor de esquina final
     @r5=x  posicion del valor a calcular
     push{r2-r9, lr}
     sub r6, r2, r5
