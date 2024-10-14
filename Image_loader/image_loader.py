@@ -19,8 +19,21 @@ def image_to_black_and_white(image_path):
     
     return pixel_data, grayscale_img.size
 
-def write_mif(pixel_data, width, height, mif_file_path):
-    """Writes the pixel data into a MIF file."""
+def get_third_quadrant_data(grayscale_img):
+    """Extracts pixel data from the third quadrant (bottom-left) of a 400x400 grayscale image."""
+    width, height = grayscale_img.size
+    third_quadrant_data = []
+
+    # Loop through the third quadrant (bottom-left), which is the lower half and left half of the image
+    for y in range(height // 2, height):
+        for x in range(0, width // 2):
+            pixel = grayscale_img.getpixel((x, y))
+            third_quadrant_data.append(pixel)
+    
+    return third_quadrant_data
+
+def write_mif(pixel_data, third_quadrant_data, width, height, mif_file_path):
+    """Writes the pixel data into a MIF file, including the third quadrant data at the end."""
     total_pixels = width * height
     depth = 524288  # Number of words in the memory (fixed for your case)
     
@@ -32,16 +45,22 @@ def write_mif(pixel_data, width, height, mif_file_path):
         mif_file.write(f"DATA_RADIX=HEX;\n\n")
         mif_file.write("CONTENT BEGIN\n")
 
+        # Write the whole image pixel data
         for address in range(min(total_pixels, depth)):
-            # For each pixel, write the corresponding data value to the MIF file
-            pixel_value = pixel_data[address]  # 0 or 1
-            pixel_hex = f'{pixel_value:02X}'   # Convert the value to 2-digit hex
-            
+            pixel_value = pixel_data[address]
+            pixel_hex = f'{pixel_value:02X}'  # Convert the value to 2-digit hex
             mif_file.write(f"    {address:05X}  :  {pixel_hex};\n")
-        
-        # Fill the rest of the memory with zeros if there are not enough pixels
-        if total_pixels < depth:
-            for address in range(total_pixels, depth):
+
+        # Append third quadrant data
+        for address, pixel_value in enumerate(third_quadrant_data, start=total_pixels):
+            if address >= depth:
+                break
+            pixel_hex = f'{pixel_value:02X}'
+            mif_file.write(f"    {address:05X}  :  {pixel_hex};\n")
+
+        # Fill the rest of the memory with zeros if needed
+        if total_pixels + len(third_quadrant_data) < depth:
+            for address in range(total_pixels + len(third_quadrant_data), depth):
                 mif_file.write(f"    {address:05X}  :  00;\n")
 
         mif_file.write("END;\n")
@@ -49,9 +68,14 @@ def write_mif(pixel_data, width, height, mif_file_path):
 def main(image_path, mif_file_path):
     # Convert image to black and white and get pixel data
     pixel_data, (width, height) = image_to_black_and_white(image_path)
+    
+    # Open the image again to get the third quadrant data
+    grayscale_img = Image.open(image_path).resize((400, 400)).convert('L')
+    third_quadrant_data = get_third_quadrant_data(grayscale_img)
 
     # Write the data to the MIF file
-    write_mif(pixel_data, width, height, mif_file_path)
+    write_mif(pixel_data, third_quadrant_data, width, height, mif_file_path)
+
 if __name__ == "__main__":
     # Path to the input image and output MIF file
     image_path = input()  # Replace with your image path
