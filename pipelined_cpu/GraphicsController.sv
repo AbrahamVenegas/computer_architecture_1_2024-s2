@@ -19,7 +19,7 @@ module GraphicsController(
 		
 	                           //Parte    Porch       Parte     Porch     Sincronización
 										//Activa   Vertical    Activa    Vertical  Vertical
-	assign vga_vsync = ~(vs >= 10'd480 + 10'd10 & vs < 10'd480 + 10'd10 +  2);
+	assign vga_vsync = ~(vs >= 10'd480 + 10'd10 & vs < 10'd480 + 10'd10 +  10'd2);
 
 	assign sync_b = vga_hsync & vga_vsync;		
 		
