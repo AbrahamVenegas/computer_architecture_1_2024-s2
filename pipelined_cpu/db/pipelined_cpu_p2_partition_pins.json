@@ -16,14 +16,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "sync_blank",
-					"strict" : false
-				},
-				{
-					"name" : "sync_b",
-					"strict" : false
-				},
-				{
 					"name" : "red[0]",
 					"strict" : false
 				},

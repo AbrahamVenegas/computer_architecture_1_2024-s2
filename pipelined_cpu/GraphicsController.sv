@@ -21,9 +21,11 @@ module GraphicsController(
 										//Activa   Vertical    Activa    Vertical  Vertical
 	assign vga_vsync = ~(vs >= 10'd480 + 10'd10 & vs < 10'd480 + 10'd10 +  10'd2);
 
-	assign sync_b = vga_hsync & vga_vsync;		
+	//assign sync_b = vga_hsync & vga_vsync;
+	assign sync_b = 1;	
 		
 									//Parte    				Parte	
 									//Activa H           Activa V
-	assign sync_blank = ~((hs < 10'd640) & (vs < 10'd480));
+	//assign sync_blank = ((hs < 10'd640) & (vs < 10'd480));
+	assign sync_blank = 0;
 endmodule	

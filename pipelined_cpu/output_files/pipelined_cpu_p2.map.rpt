@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pipelined_cpu_p2
-Mon Oct 14 01:31:36 2024
+Mon Oct 14 18:46:47 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -53,7 +53,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 14 01:31:36 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct 14 18:46:47 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; pipelined_cpu_p2                            ;
 ; Top-level Entity Name           ; VGA_Main_Module                             ;
@@ -211,14 +211,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 300       ;
+; Estimate of Logic utilization (ALMs needed) ; 294       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 349       ;
+; Combinational ALUT usage for logic          ; 344       ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 250       ;
-;     -- 5 input functions                    ; 38        ;
-;     -- 4 input functions                    ; 9         ;
-;     -- <=3 input functions                  ; 52        ;
+;     -- 6 input functions                    ; 243       ;
+;     -- 5 input functions                    ; 46        ;
+;     -- 4 input functions                    ; 4         ;
+;     -- <=3 input functions                  ; 51        ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 33        ;
 ;                                             ;           ;
@@ -230,8 +230,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 525       ;
-; Total fan-out                               ; 10217     ;
-; Average fan-out                             ; 10.69     ;
+; Total fan-out                               ; 10190     ;
+; Average fan-out                             ; 10.72     ;
 +---------------------------------------------+-----------+
 
 
@@ -240,9 +240,9 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Entity Name        ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |VGA_Main_Module                          ; 349 (1)             ; 33 (0)                    ; 4194304           ; 2          ; 30   ; 0            ; |VGA_Main_Module                                                                                                      ; VGA_Main_Module    ; work         ;
-;    |GraphicsController:controller|        ; 31 (31)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_Main_Module|GraphicsController:controller                                                                        ; GraphicsController ; work         ;
-;    |ImageDrawer:imgDrawer|                ; 249 (249)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |VGA_Main_Module|ImageDrawer:imgDrawer                                                                                ; ImageDrawer        ; work         ;
+; |VGA_Main_Module                          ; 344 (1)             ; 33 (0)                    ; 4194304           ; 2          ; 30   ; 0            ; |VGA_Main_Module                                                                                                      ; VGA_Main_Module    ; work         ;
+;    |GraphicsController:controller|        ; 27 (27)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |VGA_Main_Module|GraphicsController:controller                                                                        ; GraphicsController ; work         ;
+;    |ImageDrawer:imgDrawer|                ; 248 (248)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |VGA_Main_Module|ImageDrawer:imgDrawer                                                                                ; ImageDrawer        ; work         ;
 ;    |pll:vgapll|                           ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |VGA_Main_Module|pll:vgapll                                                                                           ; pll                ; work         ;
 ;    |ram:ram_inst|                         ; 67 (0)              ; 12 (0)                    ; 4194304           ; 0          ; 0    ; 0            ; |VGA_Main_Module|ram:ram_inst                                                                                         ; ram                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 67 (0)              ; 12 (0)                    ; 4194304           ; 0          ; 0    ; 0            ; |VGA_Main_Module|ram:ram_inst|altsyncram:altsyncram_component                                                         ; altsyncram         ; work         ;
@@ -442,18 +442,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SCLR          ; 10                          ;
 ;     SCLR              ; 10                          ;
 ;     plain             ; 13                          ;
-; arriav_lcell_comb     ; 351                         ;
+; arriav_lcell_comb     ; 345                         ;
 ;     arith             ; 43                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 42                          ;
-;     normal            ; 308                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
+;     normal            ; 302                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 3                           ;
-;         3 data inputs ; 4                           ;
-;         4 data inputs ; 9                           ;
-;         5 data inputs ; 38                          ;
-;         6 data inputs ; 250                         ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 46                          ;
+;         6 data inputs ; 243                         ;
 ; arriav_mac            ; 2                           ;
 ; boundary_port         ; 30                          ;
 ; stratixv_ram_block    ; 512                         ;
@@ -478,7 +478,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 14 01:31:29 2024
+    Info: Processing started: Mon Oct 14 18:46:40 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipelined_cpu_p2 -c pipelined_cpu_p2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -582,19 +582,22 @@ Warning (10230): Verilog HDL assignment warning at ImageDrawer.sv(38): truncated
 Warning (10230): Verilog HDL assignment warning at ImageDrawer.sv(47): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv Line: 47
 Info (12128): Elaborating entity "GraphicsController" for hierarchy "GraphicsController:controller" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv Line: 47
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sync_blank" is stuck at GND File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv Line: 4
+    Warning (13410): Pin "sync_b" is stuck at VCC File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv Line: 4
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files/pipelined_cpu_p2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 925 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 920 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 381 logic cells
+    Info (21061): Implemented 376 logic cells
     Info (21064): Implemented 512 RAM segments
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 515 megabytes
-    Info: Processing ended: Mon Oct 14 01:31:36 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 511 megabytes
+    Info: Processing ended: Mon Oct 14 18:46:47 2024
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:05
 

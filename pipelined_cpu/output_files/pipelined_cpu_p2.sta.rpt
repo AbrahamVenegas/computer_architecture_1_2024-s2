@@ -1,5 +1,5 @@
 Timing Analyzer report for pipelined_cpu_p2
-Mon Oct 14 01:39:07 2024
+Mon Oct 14 18:54:13 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -98,14 +98,14 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.44        ;
+; Average used               ; 2.36        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  48.1%      ;
-;     Processor 3            ;  48.0%      ;
-;     Processor 4            ;  47.9%      ;
+;     Processor 2            ;  45.3%      ;
+;     Processor 3            ;  45.3%      ;
+;     Processor 4            ;  45.2%      ;
 +----------------------------+-------------+
 
 
@@ -124,7 +124,7 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+-------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note                                           ;
 +------------+-----------------+-------------------+------------------------------------------------+
-; 186.81 MHz ; 186.81 MHz      ; pll:vgapll|toggle ;                                                ;
+; 196.54 MHz ; 196.54 MHz      ; pll:vgapll|toggle ;                                                ;
 ; 432.9 MHz  ; 315.06 MHz      ; clk               ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+-------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
@@ -136,14 +136,14 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 HTML report is unavailable in plain text report export.
 
 
-+--------------------------------------------+
-; Slow 1100mV 85C Model Setup Summary        ;
-+-------------------+--------+---------------+
-; Clock             ; Slack  ; End Point TNS ;
-+-------------------+--------+---------------+
-; clk               ; -8.954 ; -58287.949    ;
-; pll:vgapll|toggle ; -4.353 ; -203.957      ;
-+-------------------+--------+---------------+
++---------------------------------------------+
+; Slow 1100mV 85C Model Setup Summary         ;
++-------------------+---------+---------------+
+; Clock             ; Slack   ; End Point TNS ;
++-------------------+---------+---------------+
+; clk               ; -10.935 ; -55967.276    ;
+; pll:vgapll|toggle ; -4.088  ; -204.677      ;
++-------------------+---------+---------------+
 
 
 +-------------------------------------------+
@@ -151,8 +151,8 @@ HTML report is unavailable in plain text report export.
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; clk               ; 0.399 ; 0.000         ;
-; pll:vgapll|toggle ; 1.202 ; 0.000         ;
+; clk               ; 0.303 ; 0.000         ;
+; pll:vgapll|toggle ; 1.091 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -173,8 +173,8 @@ No paths to report.
 +-------------------+--------+----------------------+
 ; Clock             ; Slack  ; End Point TNS        ;
 +-------------------+--------+----------------------+
-; pll:vgapll|toggle ; -2.225 ; -84.536              ;
-; clk               ; -2.174 ; -103121.414          ;
+; pll:vgapll|toggle ; -2.225 ; -85.322              ;
+; clk               ; -2.174 ; -103121.329          ;
 +-------------------+--------+----------------------+
 
 
@@ -190,20 +190,20 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+-------------------+------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name        ; Note                                           ;
 +------------+-----------------+-------------------+------------------------------------------------+
-; 188.86 MHz ; 188.86 MHz      ; pll:vgapll|toggle ;                                                ;
+; 198.33 MHz ; 198.33 MHz      ; pll:vgapll|toggle ;                                                ;
 ; 427.35 MHz ; 315.06 MHz      ; clk               ; limit due to minimum period restriction (tmin) ;
 +------------+-----------------+-------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+--------------------------------------------+
-; Slow 1100mV 0C Model Setup Summary         ;
-+-------------------+--------+---------------+
-; Clock             ; Slack  ; End Point TNS ;
-+-------------------+--------+---------------+
-; clk               ; -8.798 ; -57428.227    ;
-; pll:vgapll|toggle ; -4.295 ; -199.412      ;
-+-------------------+--------+---------------+
++---------------------------------------------+
+; Slow 1100mV 0C Model Setup Summary          ;
++-------------------+---------+---------------+
+; Clock             ; Slack   ; End Point TNS ;
++-------------------+---------+---------------+
+; clk               ; -10.612 ; -55019.662    ;
+; pll:vgapll|toggle ; -4.042  ; -201.925      ;
++-------------------+---------+---------------+
 
 
 +-------------------------------------------+
@@ -211,8 +211,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; clk               ; 0.221 ; 0.000         ;
-; pll:vgapll|toggle ; 1.086 ; 0.000         ;
+; clk               ; 0.288 ; 0.000         ;
+; pll:vgapll|toggle ; 0.949 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -233,8 +233,8 @@ No paths to report.
 +-------------------+--------+---------------------+
 ; Clock             ; Slack  ; End Point TNS       ;
 +-------------------+--------+---------------------+
-; pll:vgapll|toggle ; -2.225 ; -84.309             ;
-; clk               ; -2.174 ; -102898.708         ;
+; pll:vgapll|toggle ; -2.225 ; -84.913             ;
+; clk               ; -2.174 ; -102899.352         ;
 +-------------------+--------+---------------------+
 
 
@@ -250,8 +250,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; clk               ; -5.049 ; -32091.899    ;
-; pll:vgapll|toggle ; -2.164 ; -98.587       ;
+; clk               ; -6.703 ; -31522.810    ;
+; pll:vgapll|toggle ; -2.080 ; -100.604      ;
 +-------------------+--------+---------------+
 
 
@@ -260,8 +260,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; clk               ; 0.245 ; 0.000         ;
-; pll:vgapll|toggle ; 0.574 ; 0.000         ;
+; clk               ; 0.179 ; 0.000         ;
+; pll:vgapll|toggle ; 0.510 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -282,8 +282,8 @@ No paths to report.
 +-------------------+--------+----------------------+
 ; Clock             ; Slack  ; End Point TNS        ;
 +-------------------+--------+----------------------+
-; clk               ; -2.174 ; -104583.425          ;
-; pll:vgapll|toggle ; -1.702 ; -54.774              ;
+; clk               ; -2.174 ; -104578.930          ;
+; pll:vgapll|toggle ; -1.702 ; -54.464              ;
 +-------------------+--------+----------------------+
 
 
@@ -294,7 +294,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 6
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 0.180 ns
+Worst Case Available Settling Time: 0.243 ns
 
 
 
@@ -304,8 +304,8 @@ Worst Case Available Settling Time: 0.180 ns
 +-------------------+--------+---------------+
 ; Clock             ; Slack  ; End Point TNS ;
 +-------------------+--------+---------------+
-; clk               ; -4.396 ; -28211.381    ;
-; pll:vgapll|toggle ; -1.943 ; -86.805       ;
+; clk               ; -5.830 ; -27500.454    ;
+; pll:vgapll|toggle ; -1.869 ; -88.065       ;
 +-------------------+--------+---------------+
 
 
@@ -314,8 +314,8 @@ Worst Case Available Settling Time: 0.180 ns
 +-------------------+-------+---------------+
 ; Clock             ; Slack ; End Point TNS ;
 +-------------------+-------+---------------+
-; clk               ; 0.041 ; 0.000         ;
-; pll:vgapll|toggle ; 0.480 ; 0.000         ;
+; clk               ; 0.143 ; 0.000         ;
+; pll:vgapll|toggle ; 0.417 ; 0.000         ;
 +-------------------+-------+---------------+
 
 
@@ -336,7 +336,7 @@ No paths to report.
 +-------------------+--------+---------------------+
 ; Clock             ; Slack  ; End Point TNS       ;
 +-------------------+--------+---------------------+
-; clk               ; -2.174 ; -106270.662         ;
+; clk               ; -2.174 ; -106268.109         ;
 ; pll:vgapll|toggle ; -1.702 ; -54.464             ;
 +-------------------+--------+---------------------+
 
@@ -348,7 +348,7 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 6
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 0.211 ns
+Worst Case Available Settling Time: 0.273 ns
 
 
 
@@ -358,12 +358,12 @@ Worst Case Available Settling Time: 0.211 ns
 +--------------------+------------+-------+----------+---------+---------------------+
 ; Clock              ; Setup      ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------+------------+-------+----------+---------+---------------------+
-; Worst-case Slack   ; -8.954     ; 0.041 ; N/A      ; N/A     ; -2.225              ;
-;  clk               ; -8.954     ; 0.041 ; N/A      ; N/A     ; -2.174              ;
-;  pll:vgapll|toggle ; -4.353     ; 0.480 ; N/A      ; N/A     ; -2.225              ;
-; Design-wide TNS    ; -58491.906 ; 0.0   ; 0.0      ; 0.0     ; -106325.126         ;
-;  clk               ; -58287.949 ; 0.000 ; N/A      ; N/A     ; -106270.662         ;
-;  pll:vgapll|toggle ; -203.957   ; 0.000 ; N/A      ; N/A     ; -84.536             ;
+; Worst-case Slack   ; -10.935    ; 0.143 ; N/A      ; N/A     ; -2.225              ;
+;  clk               ; -10.935    ; 0.143 ; N/A      ; N/A     ; -2.174              ;
+;  pll:vgapll|toggle ; -4.088     ; 0.417 ; N/A      ; N/A     ; -2.225              ;
+; Design-wide TNS    ; -56171.953 ; 0.0   ; 0.0      ; 0.0     ; -106322.573         ;
+;  clk               ; -55967.276 ; 0.000 ; N/A      ; N/A     ; -106268.109         ;
+;  pll:vgapll|toggle ; -204.677   ; 0.000 ; N/A      ; N/A     ; -85.322             ;
 +--------------------+------------+-------+----------+---------+---------------------+
 
 
@@ -567,8 +567,8 @@ Worst Case Available Settling Time: 0.211 ns
 ; From Clock        ; To Clock          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------+-------------------+----------+----------+----------+----------+
 ; clk               ; clk               ; 1030     ; 0        ; 0        ; 0        ;
-; pll:vgapll|toggle ; clk               ; 26819583 ; 1        ; 0        ; 0        ;
-; pll:vgapll|toggle ; pll:vgapll|toggle ; 3973     ; 0        ; 0        ; 0        ;
+; pll:vgapll|toggle ; clk               ; 26820639 ; 1        ; 0        ; 0        ;
+; pll:vgapll|toggle ; pll:vgapll|toggle ; 4163     ; 0        ; 0        ; 0        ;
 +-------------------+-------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -579,8 +579,8 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; From Clock        ; To Clock          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------+-------------------+----------+----------+----------+----------+
 ; clk               ; clk               ; 1030     ; 0        ; 0        ; 0        ;
-; pll:vgapll|toggle ; clk               ; 26819583 ; 1        ; 0        ; 0        ;
-; pll:vgapll|toggle ; pll:vgapll|toggle ; 3973     ; 0        ; 0        ; 0        ;
+; pll:vgapll|toggle ; clk               ; 26820639 ; 1        ; 0        ; 0        ;
+; pll:vgapll|toggle ; pll:vgapll|toggle ; 4163     ; 0        ; 0        ; 0        ;
 +-------------------+-------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -606,8 +606,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 29    ; 29   ;
-; Unconstrained Output Port Paths ; 2151  ; 2151 ;
+; Unconstrained Output Ports      ; 27    ; 27   ;
+; Unconstrained Output Port Paths ; 2200  ; 2200 ;
 +---------------------------------+-------+------+
 
 
@@ -651,8 +651,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; red[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; red[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; red[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; sync_b      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; sync_blank  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_hsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_vsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
@@ -688,8 +686,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; red[5]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; red[6]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; red[7]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; sync_b      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; sync_blank  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_hsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; vga_vsync   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
@@ -701,7 +697,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 14 01:38:45 2024
+    Info: Processing started: Mon Oct 14 18:53:51 2024
 Info: Command: quartus_sta pipelined_cpu_p2 -c pipelined_cpu_p2
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -719,23 +715,23 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.954
+Info (332146): Worst-case setup slack is -10.935
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.954          -58287.949 clk 
-    Info (332119):    -4.353            -203.957 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.399
+    Info (332119):   -10.935          -55967.276 clk 
+    Info (332119):    -4.088            -204.677 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.303
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.399               0.000 clk 
-    Info (332119):     1.202               0.000 pll:vgapll|toggle 
+    Info (332119):     0.303               0.000 clk 
+    Info (332119):     1.091               0.000 pll:vgapll|toggle 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225             -84.536 pll:vgapll|toggle 
-    Info (332119):    -2.174         -103121.414 clk 
+    Info (332119):    -2.225             -85.322 pll:vgapll|toggle 
+    Info (332119):    -2.174         -103121.329 clk 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
@@ -744,23 +740,23 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -8.798
+Info (332146): Worst-case setup slack is -10.612
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -8.798          -57428.227 clk 
-    Info (332119):    -4.295            -199.412 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.221
+    Info (332119):   -10.612          -55019.662 clk 
+    Info (332119):    -4.042            -201.925 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.288
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.221               0.000 clk 
-    Info (332119):     1.086               0.000 pll:vgapll|toggle 
+    Info (332119):     0.288               0.000 clk 
+    Info (332119):     0.949               0.000 pll:vgapll|toggle 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.225
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.225             -84.309 pll:vgapll|toggle 
-    Info (332119):    -2.174         -102898.708 clk 
+    Info (332119):    -2.225             -84.913 pll:vgapll|toggle 
+    Info (332119):    -2.174         -102899.352 clk 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
@@ -769,63 +765,63 @@ Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.049
+Info (332146): Worst-case setup slack is -6.703
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.049          -32091.899 clk 
-    Info (332119):    -2.164             -98.587 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.245
+    Info (332119):    -6.703          -31522.810 clk 
+    Info (332119):    -2.080            -100.604 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.179
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.245               0.000 clk 
-    Info (332119):     0.574               0.000 pll:vgapll|toggle 
+    Info (332119):     0.179               0.000 clk 
+    Info (332119):     0.510               0.000 pll:vgapll|toggle 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174         -104583.425 clk 
-    Info (332119):    -1.702             -54.774 pll:vgapll|toggle 
-Info (332114): Report Metastability: Found 6 synchronizer chains.
-    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 6
-    Info (332114): Shortest Synchronizer Chain: 2 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 0.180 ns
-    Info (332114): 
-Info: Analyzing Fast 1100mV 0C Model
-Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Critical Warning (332148): Timing requirements not met
-    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.396
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -4.396          -28211.381 clk 
-    Info (332119):    -1.943             -86.805 pll:vgapll|toggle 
-Info (332146): Worst-case hold slack is 0.041
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):     0.041               0.000 clk 
-    Info (332119):     0.480               0.000 pll:vgapll|toggle 
-Info (332140): No Recovery paths to report
-Info (332140): No Removal paths to report
-Info (332146): Worst-case minimum pulse width slack is -2.174
-    Info (332119):     Slack       End Point TNS Clock 
-    Info (332119): ========= =================== =====================
-    Info (332119):    -2.174         -106270.662 clk 
+    Info (332119):    -2.174         -104578.930 clk 
     Info (332119):    -1.702             -54.464 pll:vgapll|toggle 
 Info (332114): Report Metastability: Found 6 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 6
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 0.211 ns
+    Info (332114): Worst Case Available Settling Time: 0.243 ns
+    Info (332114): 
+Info: Analyzing Fast 1100mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -5.830
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -5.830          -27500.454 clk 
+    Info (332119):    -1.869             -88.065 pll:vgapll|toggle 
+Info (332146): Worst-case hold slack is 0.143
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.143               0.000 clk 
+    Info (332119):     0.417               0.000 pll:vgapll|toggle 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.174
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.174         -106268.109 clk 
+    Info (332119):    -1.702             -54.464 pll:vgapll|toggle 
+Info (332114): Report Metastability: Found 6 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 6
+    Info (332114): Shortest Synchronizer Chain: 2 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 0.273 ns
     Info (332114): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 964 megabytes
-    Info: Processing ended: Mon Oct 14 01:39:07 2024
+    Info: Peak virtual memory: 963 megabytes
+    Info: Processing ended: Mon Oct 14 18:54:13 2024
     Info: Elapsed time: 00:00:22
     Info: Total CPU time (on all processors): 00:00:34
 
