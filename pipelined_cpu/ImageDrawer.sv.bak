@@ -1,0 +1,7 @@
+module ImageDrawer(
+	input logic clk,
+	input logic [9:0] hs,
+	input logic [9:0] vs,
+	input logic [7:0] pixel,
+	
+);

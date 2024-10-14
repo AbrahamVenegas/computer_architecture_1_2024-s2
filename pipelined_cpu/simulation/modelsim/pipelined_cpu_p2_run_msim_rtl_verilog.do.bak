@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv}
+vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv}
+vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv}
+
