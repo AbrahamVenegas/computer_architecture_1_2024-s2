@@ -11,24 +11,24 @@ cModel Technology
 Z0 d/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/simulation/modelsim
 vGraphicsController
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1728860431
+Z2 !s110 1728973304
 !i10b 1
-!s100 TV?af]3oOi4J:VYj8bdRX1
+!s100 =c<P5B1?3oL9V^z<Z0Vhi2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IjkfjcjCF1S4@Ja4`V0M^a0
+IinU3i7IPb3mk1CmMLReVD2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1728789736
+w1728949727
 8/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv
 F/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv
-!i122 2
-L0 1 29
+!i122 3
+L0 1 31
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1728860431.000000
+Z6 !s108 1728973304.000000
 !s107 /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu|/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv|
 !i113 1
@@ -40,17 +40,17 @@ vImageDrawer
 R1
 R2
 !i10b 1
-!s100 me<_N``7Cd8879VU`7EY23
+!s100 fgLJ]d>6YmdZe>@Fi9`[X2
 R3
-I0RlDb8oM]>1SF0;XXgdX30
+IOfN]9YB`eZM6FEb^M>m6a3
 R4
 S1
 R0
-w1728803130
+w1728971675
 8/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv
 F/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv
-!i122 4
-L0 1 53
+!i122 5
+L0 1 82
 R5
 r1
 !s85 0
@@ -63,6 +63,60 @@ R7
 R8
 R9
 n@image@drawer
+vmainModule
+R1
+R2
+!i10b 1
+!s100 5]PbO5oKM7S1MSoiYOKfY1
+R3
+I1081ABYS2YUn5jCI06gGY0
+R4
+S1
+R0
+w1728972399
+8/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv
+F/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv
+!i122 1
+L0 1 38
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu|/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv|
+!i113 1
+R7
+R8
+R9
+nmain@module
+vmainModule_tb
+R1
+R2
+!i10b 1
+!s100 Cf_LkUQ_]KzVPIcFc@Sgh0
+R3
+I_H<LaG^`OSKF`?TL=eQF`0
+R4
+S1
+R0
+w1728971789
+8/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv
+F/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv
+!i122 6
+L0 3 60
+R5
+r1
+!s85 0
+31
+R6
+!s107 /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu|/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv|
+!i113 1
+R7
+R8
+R9
+nmain@module_tb
 vpll
 R1
 R2
@@ -76,7 +130,7 @@ R0
 w1728796768
 8/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv
 F/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv
-!i122 3
+!i122 4
 L0 1 12
 R5
 r1
@@ -113,47 +167,21 @@ R6
 o-vlog01compat -work work
 !s92 -vlog01compat -work work {+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu}
 R9
-vtb_ram_read
-R1
-R2
-!i10b 1
-!s100 LKM0R_neZ]VfIEM`H_l`[1
-R3
-IT6L?>S>W4@@Y4T4>nhgBC1
-R4
-S1
-R0
-w1728860401
-8/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/tb_ram_read.sv
-F/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/tb_ram_read.sv
-!i122 5
-L0 3 52
-R5
-r1
-!s85 0
-31
-R6
-!s107 /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/tb_ram_read.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu|/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/tb_ram_read.sv|
-!i113 1
-R7
-R8
-R9
 vVGA_Main_Module
 R1
 R2
 !i10b 1
-!s100 olDznBNVDmEKZjeRHKdGQ2
+!s100 01bP:0d1FgFShiMkQXb3@1
 R3
-I4dU;CmnnO2_6f^HJ4Y@BQ3
+I^Q_iT@NoLOBbGCal?F0nB3
 R4
 S1
 R0
-w1728859345
+w1728955308
 8/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv
 F/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv
-!i122 1
-L0 1 49
+!i122 2
+L0 1 40
 R5
 r1
 !s85 0
