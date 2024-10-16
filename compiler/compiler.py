@@ -1,10 +1,3 @@
-'''
-
-Compiler for our own assembly language
-
-'''
-
-
 import sys
 
 program_filepath = sys.argv[1]
@@ -13,14 +6,26 @@ print("[CMD] Parsing")
 
 program_lines = []
 
+# Leer el archivo de programa
 with open(program_filepath, "r") as program_file:
     program_lines = [
         line.strip()
-            for line in program_file.readlines()]
+        for line in program_file.readlines()]
 
 program = []
 for line in program_lines:
-    parts = line.split(" ")
+    # Ignorar líneas vacías o comentarios
+    if line == "" or line.startswith(";"):
+        continue
+
+    # Reemplazar comas con espacios para dividir correctamente
+    line = line.replace(",", " ")
+    parts = line.split()
+
+    if len(parts) == 0:
+        # Si la línea solo contiene espacios, la ignoramos
+        continue
+
     opcode = parts[0]
 
     if opcode == "":
@@ -28,60 +33,58 @@ for line in program_lines:
 
     program.append(opcode)
 
-
-    # Arithmetic instructions
+    # Instrucciones aritméticas
     if opcode in ["SUMA", "MULT", "REST", "DIVI"]:
-        # Syntax: Opcode, Rd, R1, R2
+        # Sintaxis: Opcode, Rd, R1, R2
         if len(parts) == 4:
-            program.append(parts[1])  # Register destination (Rd)
-            program.append(parts[2])  # Operand 1 (R1)
-            program.append(parts[3])  # Operand 2 (R2)
+            program.append(parts[1])  # Registro destino (Rd)
+            program.append(parts[2])  # Operando 1 (R1)
+            program.append(parts[3])  # Operando 2 (R2)
         else:
             print(f"[ERROR] Invalid syntax in line: {line}")
 
-    # Branching instructions
+    # Instrucciones de salto
     elif opcode in ["SALT", "SMEI", "SMAI", "SYCA", "SYEN"]:
-        # Syntax: Opcode, address/label
+        # Sintaxis: Opcode, dirección/etiqueta
         if len(parts) == 2:
-            program.append(parts[1])  # Address or label
+            program.append(parts[1])  # Dirección o etiqueta
         else:
             print(f"[ERROR] Invalid syntax in line: {line}")
 
-    # Storage/Load instructions with immediate or direct addresses
+    # Instrucciones de almacenamiento/carga con direcciones inmediatas o directas
     elif opcode in ["MOVE", "STOR", "LOAD"]:
         if len(parts) == 3:
-            # Opcode, Rd, Imm or Opcode, Rd, Address
-            program.append(parts[1])  # Destination register (Rd)
-            program.append(parts[2])  # Immediate value or address
+            # Opcode, Rd, Inmediato o Opcode, Rd, Dirección
+            program.append(parts[1])  # Registro destino (Rd)
+            program.append(parts[2])  # Valor inmediato o dirección
         elif len(parts) == 4:
             # Opcode, R1, R2, Offset
-            program.append(parts[1])  # Source register (R1)
-            program.append(parts[2])  # Destination register (R2)
+            program.append(parts[1])  # Registro fuente (R1)
+            program.append(parts[2])  # Registro destino (R2)
             program.append(parts[3])  # Offset
         elif len(parts) == 5:
-            # Opcode, R1, R2, Roffset
-            program.append(parts[1])  # Source register (R1)
-            program.append(parts[2])  # Destination register (R2)
-            program.append(parts[3])  # Register offset (Roffset)
+            # Opcode, R1, R2, Registro offset
+            program.append(parts[1])  # Registro fuente (R1)
+            program.append(parts[2])  # Registro destino (R2)
+            program.append(parts[3])  # Registro offset (Roffset)
         else:
             print(f"[ERROR] Invalid syntax in line: {line}")
 
-    # PUSH/REST instructions (with a list of registers)
+    # Instrucciones PUSH/REST con lista de registros
     elif opcode in ["PUSH", "REST"]:
         if len(parts) > 1:
             for register in parts[1:]:
-                program.append(register)  # Append each register
+                program.append(register)  # Añadir cada registro
         else:
             print(f"[ERROR] Invalid syntax in line: {line}")
 
-    # Comparison instruction
+    # Instrucción de comparación
     elif opcode == "COMP":
         if len(parts) == 3:
-            # Syntax: COMP, R1, R2
-            program.append(parts[1])  # Register 1 (R1)
-            program.append(parts[2])  # Register 2 (R2) or Immediate value
+            # Sintaxis: COMP, R1, R2
+            program.append(parts[1])  # Registro 1 (R1)
+            program.append(parts[2])  # Registro 2 (R2) o valor inmediato
         else:
             print(f"[ERROR] Invalid syntax in line: {line}")
-
 
 print(program)
