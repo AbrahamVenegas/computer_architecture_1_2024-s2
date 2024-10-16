@@ -1,8 +1,5 @@
-
-//TODO: HAY QUE MANEJAR EL DECODE Y FUNCIONES MATEMATICAS CON NUESTRO ENCODING Y MANEJAR LAS SEÑALES QUE SI OCUPAMOS. 
-
 module controller(input  logic         clk, reset,
-                  input  logic [29:0] InstrD,
+                  input  logic [31:12] InstrD,
                   input  logic [3:0]   ALUFlagsE,
                   output logic [1:0]   RegSrcD, ImmSrcD,
                   output logic         ALUSrcE, BranchTakenE,
@@ -29,7 +26,7 @@ module controller(input  logic         clk, reset,
 
   // Decode stage
   always_comb
-    casex(InstrD[29:26]) // Op
+    casex(InstrD[27:26]) // Op
       2'b00: if (InstrD[25]) controlsD = 10'b0000101001; // DP imm
            
 		   	 else            controlsD = 10'b0000001001; // DP reg
@@ -63,22 +60,25 @@ module controller(input  logic         clk, reset,
       FlagWriteD = 2'b00; // don't update Flags
     end
 
-	 assign PCSrcD = (((InstrD[15:12] == 4'b1111) & RegWriteD) | BranchD);
+	 assign PCSrcD = (((InstrD[15:12] == 4'b1111) & RegWriteD) | BranchD); //Identifica si es un branch o inst especial que escribe en PC
+	 //RegWriteD indica si el registro debe escribirse
+	 //BranchD indica si la instruccion decodificada es branch
+	 //PCSrcD si alguna es verdadera se cambia para cambiar la direccion del PC
 
 	 
 	 // Execute stage
-    floprc #(7) flushedregsE(clk, reset, FlushE, 
+    flipfloprc #(7) flushedregsE(clk, reset, FlushE, 
 	                          {FlagWriteD, BranchD, MemWriteD, RegWriteD, PCSrcD, MemtoRegD},
 	                          {FlagWriteE, BranchE, MemWriteE, RegWriteE, PCSrcE, MemtoRegE}
 									  );
 									  
-    flopr #(3) regsE(clk, reset,
+    flipflopr #(3) regsE(clk, reset,
 	                  {ALUSrcD, ALUControlD}, 
 							{ALUSrcE, ALUControlE}
 							);
 							
-    flopr #(4) condregE(clk, reset, InstrD[31:28], CondE);
-    flopr #(4) flagsreg(clk, reset, FlagsNextE, FlagsE);
+    flipflopr #(4) condregE(clk, reset, InstrD[31:28], CondE);
+    flipflopr #(4) flagsreg(clk, reset, FlagsNextE, FlagsE);
 
 	 // write and Branch controls are conditional
     conditional Cond(CondE, FlagsE, ALUFlagsE, FlagWriteE, CondExE, FlagsNextE);
@@ -89,14 +89,14 @@ module controller(input  logic         clk, reset,
 
 	 
 	 // Memory stage
-    flopr #(4) regsM(clk, reset, 
+    flipflopr #(4) regsM(clk, reset, 
 	                  {MemWriteGatedE, MemtoRegE, RegWriteGatedE, PCSrcGatedE},
                      {MemWriteM, MemtoRegM, RegWriteM, PCSrcM}
 							);
 
 							
     // Writeback stage
-    flopr #(3) regsW(clk, reset,
+    flipflopr #(3) regsW(clk, reset,
 	                  {MemtoRegM, RegWriteM, PCSrcM},
 							{MemtoRegW, RegWriteW, PCSrcW}
 							);
