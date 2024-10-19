@@ -9,14 +9,27 @@ program_lines = []
 # Leer el archivo de programa
 with open(program_filepath, "r") as program_file:
     program_lines = [
-        line.strip()
-        for line in program_file.readlines()]
+        line.strip() for line in program_file.readlines()
+    ]
 
-program = []
+program = []  # List to store the parsed program including labels
+
 for line in program_lines:
-    # Ignorar líneas vacías o comentarios
-    if line == "" or line.startswith(";"):
+    # Remove inline comments of the form //Internal documentation
+    if "//" in line:
+        line = line.split("//")[0].strip()
+
+    # Skip empty lines
+    if line == "":
         continue
+
+    # Check if the line contains a label (starts with _)
+    if line.startswith("_"):
+        label = line.split(":")[0].strip()  # Extract label
+        program.append(label)  # Save the label
+        # Keep the rest of the line after the label (if there's code after the label)
+        if ":" in line:
+            line = line.split(":")[1].strip()
 
     # Reemplazar comas con espacios para dividir correctamente
     line = line.replace(",", " ")
@@ -34,12 +47,25 @@ for line in program_lines:
     program.append(opcode)
 
     # Instrucciones aritméticas
-    if opcode in ["SUMA", "MULT", "REST", "DIVI"]:
+    if opcode in ["MULT", "SUST", "DIVI"]:
         # Sintaxis: Opcode, Rd, R1, R2
         if len(parts) == 4:
             program.append(parts[1])  # Registro destino (Rd)
             program.append(parts[2])  # Operando 1 (R1)
             program.append(parts[3])  # Operando 2 (R2)
+        else:
+            print(f"[ERROR] Invalid syntax in line: {line}")
+
+    elif opcode == "SUMA":
+        # Sintaxis: Opcode, Rd, R1, R2
+        if len(parts) == 4:
+            program.append(parts[1])  # Registro destino (Rd)
+            program.append(parts[2])  # Operando 1 (R1)
+            program.append(parts[3])  # Operando 2 (R2)
+        elif len(parts) == 3:
+            # Opcode, Rd, Inmediato o Opcode, Rd, Dirección
+            program.append(parts[1])  # Registro destino (Rd)
+            program.append(parts[2])  # valor de suma
         else:
             print(f"[ERROR] Invalid syntax in line: {line}")
 
@@ -87,4 +113,5 @@ for line in program_lines:
         else:
             print(f"[ERROR] Invalid syntax in line: {line}")
 
-print(program)
+# Print the parsed program including labels
+print("Parsed Program:", program)
