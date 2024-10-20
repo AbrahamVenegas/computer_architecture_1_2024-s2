@@ -1,5 +1,5 @@
 Flow report for pipelined_cpu_p2
-Sat Oct 19 22:55:54 2024
+Sun Oct 20 14:18:36 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Oct 19 22:55:54 2024       ;
+; Flow Status                     ; Successful - Sun Oct 20 14:18:36 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; pipelined_cpu_p2                            ;
 ; Top-level Entity Name           ; mainModule                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 388 / 41,910 ( < 1 % )                      ;
-; Total registers                 ; 56                                          ;
-; Total pins                      ; 33 / 499 ( 7 % )                            ;
+; Logic utilization (in ALMs)     ; 406 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 70                                          ;
+; Total pins                      ; 49 / 499 ( 10 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,194,304 / 5,662,720 ( 74 % )              ;
 ; Total DSP Blocks                ; 5 / 112 ( 4 % )                             ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/19/2024 22:48:39 ;
+; Start date & time ; 10/20/2024 14:13:58 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pipelined_cpu_p2    ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+------------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value    ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+------------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 207432538400447.172939971933475        ; --               ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 207432538400447.172945523805493        ; --               ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; pll_tb                            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; mainModule_tb                     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --          ; tb_ram_read                       ;
@@ -120,12 +120,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:06     ; 1.0                     ; 513 MB              ; 00:00:05                           ;
-; Fitter               ; 00:06:22     ; 1.1                     ; 2007 MB             ; 00:11:49                           ;
-; Assembler            ; 00:00:15     ; 1.0                     ; 576 MB              ; 00:00:14                           ;
-; Timing Analyzer      ; 00:00:23     ; 2.4                     ; 1027 MB             ; 00:00:37                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 729 MB              ; 00:00:02                           ;
-; Total                ; 00:07:08     ; --                      ; --                  ; 00:12:47                           ;
+; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 507 MB              ; 00:00:05                           ;
+; Fitter               ; 00:03:45     ; 1.2                     ; 1985 MB             ; 00:06:34                           ;
+; Assembler            ; 00:00:14     ; 1.0                     ; 575 MB              ; 00:00:15                           ;
+; Timing Analyzer      ; 00:00:23     ; 2.4                     ; 1041 MB             ; 00:00:39                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 730 MB              ; 00:00:02                           ;
+; Total                ; 00:04:31     ; --                      ; --                  ; 00:07:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

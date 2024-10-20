@@ -11,6 +11,11 @@ vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/comp
 vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv}
 vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv}
 vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv}
+vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv}
+vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv}
+vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv}
+vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv}
+vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files/binary_to_7seg.sv}
 
 vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv}
 

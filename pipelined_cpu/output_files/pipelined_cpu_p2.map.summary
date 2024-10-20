@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sat Oct 19 22:48:46 2024
+Analysis & Synthesis Status : Successful - Sun Oct 20 14:14:06 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : pipelined_cpu_p2
 Top-level Entity Name : mainModule
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 50
-Total pins : 33
+Total registers : 60
+Total pins : 49
 Total virtual pins : 0
 Total block memory bits : 4,194,304
 Total DSP Blocks : 5

@@ -2,16 +2,18 @@
 
 module mainModule_tb;
 
-  // Declare testbench variables
+  // Testbench signals
   logic clk;
-  logic [3:0] quadrant;
+  logic up_btn, down_btn, select_btn;
   logic vga_hsync, vga_vsync, sync_blank, sync_b, clk_25;
   logic [7:0] red, green, blue;
-
-  // Instantiate the main module
+  
+  // Instantiate the mainModule
   mainModule uut (
     .clk(clk),
-    .quadrant(quadrant),
+    .up_btn(up_btn),
+    .down_btn(down_btn),
+    .select_btn(select_btn),
     .vga_hsync(vga_hsync),
     .vga_vsync(vga_vsync),
     .sync_blank(sync_blank),
@@ -21,42 +23,40 @@ module mainModule_tb;
     .green(green),
     .blue(blue)
   );
-
-  // Clock generation
-  initial begin
-    clk = 0;
-    forever #10 clk = ~clk; // 50MHz clock (assuming #10 = 20ns period)
-  end
-
-  // Test stimulus
+  
+  // Clock generation for 50 MHz
+  always #10 clk = ~clk;  // 50 MHz clock
+  
   initial begin
     // Initialize inputs
-    quadrant = 4'b0000;
+    clk = 0;
+    up_btn = 1;
+    down_btn = 1;
+    select_btn = 1;
     
-    // Wait for some time
+    // Push and release up_btn
+    #20 up_btn = 0;  // Press up button
+    #20 up_btn = 1;  // Release up button
+    
+    // Push and release select_btn
+    #40 select_btn = 0;  // Press select button
+    #20 select_btn = 1;  // Release select button
+    // Push and release select_btn
+    #40 select_btn = 0;  // Press select button
+    #20 select_btn = 1;  // Release select button
+	 // Push and release select_btn
+    #40 select_btn = 0;  // Press select button
+    #20 select_btn = 1;  // Release select button
+    // Observe the outputs
     #100;
-
-    // Test different quadrants
-    quadrant = 4'b0001; // Test with quadrant 1
-    #100;
-
-    quadrant = 4'b0010; // Test with quadrant 2
-    #100;
-
-    quadrant = 4'b0011; // Test with quadrant 3
-    #100;
-
-    quadrant = 4'b0100; // Test with quadrant 4
-    #100;
-
-    // Stop the simulation
+    
+    // End simulation
     $stop;
   end
 
   // Monitor outputs
   initial begin
-    $monitor("Time: %0t | clk: %b | quadrant: %b | vga_hsync: %b | vga_vsync: %b | sync_blank: %b | sync_b: %b | red: %h | green: %h | blue: %h", 
-             $time, clk, quadrant, vga_hsync, vga_vsync, sync_blank, sync_b, red, green, blue);
+    $monitor("Time: %0d, up_btn: %b, select_btn: %b, red: %h, green: %h, blue: %h",
+             $time, up_btn, select_btn, red, green, blue);
   end
-
 endmodule

@@ -1,39 +1,55 @@
 |mainModule
-clk => clk.IN5
+clk => clk.IN4
 up_btn => prev_up.DATAIN
 up_btn => comb.IN1
 down_btn => prev_down.DATAIN
 down_btn => comb.IN1
-select_btn => select_btn.IN1
-vga_hsync <= VGA_Main_Module:vga.vga_hsync
-vga_vsync <= VGA_Main_Module:vga.vga_vsync
-sync_blank <= VGA_Main_Module:vga.sync_blank
-sync_b <= VGA_Main_Module:vga.sync_b
-clk_25 <= VGA_Main_Module:vga.clk_25
-red[0] <= VGA_Main_Module:vga.red
-red[1] <= VGA_Main_Module:vga.red
-red[2] <= VGA_Main_Module:vga.red
-red[3] <= VGA_Main_Module:vga.red
-red[4] <= VGA_Main_Module:vga.red
-red[5] <= VGA_Main_Module:vga.red
-red[6] <= VGA_Main_Module:vga.red
-red[7] <= VGA_Main_Module:vga.red
-green[0] <= VGA_Main_Module:vga.green
-green[1] <= VGA_Main_Module:vga.green
-green[2] <= VGA_Main_Module:vga.green
-green[3] <= VGA_Main_Module:vga.green
-green[4] <= VGA_Main_Module:vga.green
-green[5] <= VGA_Main_Module:vga.green
-green[6] <= VGA_Main_Module:vga.green
-green[7] <= VGA_Main_Module:vga.green
-blue[0] <= VGA_Main_Module:vga.blue
-blue[1] <= VGA_Main_Module:vga.blue
-blue[2] <= VGA_Main_Module:vga.blue
-blue[3] <= VGA_Main_Module:vga.blue
-blue[4] <= VGA_Main_Module:vga.blue
-blue[5] <= VGA_Main_Module:vga.blue
-blue[6] <= VGA_Main_Module:vga.blue
-blue[7] <= VGA_Main_Module:vga.blue
+select_btn => _.IN1
+vga_hsync << VGA_Main_Module:vga.vga_hsync
+vga_vsync << VGA_Main_Module:vga.vga_vsync
+sync_blank << VGA_Main_Module:vga.sync_blank
+sync_b << VGA_Main_Module:vga.sync_b
+clk_25 << VGA_Main_Module:vga.clk_25
+red[0] << VGA_Main_Module:vga.red
+red[1] << VGA_Main_Module:vga.red
+red[2] << VGA_Main_Module:vga.red
+red[3] << VGA_Main_Module:vga.red
+red[4] << VGA_Main_Module:vga.red
+red[5] << VGA_Main_Module:vga.red
+red[6] << VGA_Main_Module:vga.red
+red[7] << VGA_Main_Module:vga.red
+green[0] << VGA_Main_Module:vga.green
+green[1] << VGA_Main_Module:vga.green
+green[2] << VGA_Main_Module:vga.green
+green[3] << VGA_Main_Module:vga.green
+green[4] << VGA_Main_Module:vga.green
+green[5] << VGA_Main_Module:vga.green
+green[6] << VGA_Main_Module:vga.green
+green[7] << VGA_Main_Module:vga.green
+blue[0] << VGA_Main_Module:vga.blue
+blue[1] << VGA_Main_Module:vga.blue
+blue[2] << VGA_Main_Module:vga.blue
+blue[3] << VGA_Main_Module:vga.blue
+blue[4] << VGA_Main_Module:vga.blue
+blue[5] << VGA_Main_Module:vga.blue
+blue[6] << VGA_Main_Module:vga.blue
+blue[7] << VGA_Main_Module:vga.blue
+addr_tst_ms[0] << binary_to_7seg:bch.seg_h
+addr_tst_ms[1] << binary_to_7seg:bch.seg_h
+addr_tst_ms[2] << binary_to_7seg:bch.seg_h
+addr_tst_ms[3] << binary_to_7seg:bch.seg_h
+addr_tst_ms[4] << binary_to_7seg:bch.seg_h
+addr_tst_ms[5] << binary_to_7seg:bch.seg_h
+addr_tst_ms[6] << binary_to_7seg:bch.seg_h
+add_tst_ls[0] << binary_to_7seg:bch.seg_l
+add_tst_ls[1] << binary_to_7seg:bch.seg_l
+add_tst_ls[2] << binary_to_7seg:bch.seg_l
+add_tst_ls[3] << binary_to_7seg:bch.seg_l
+add_tst_ls[4] << binary_to_7seg:bch.seg_l
+add_tst_ls[5] << binary_to_7seg:bch.seg_l
+add_tst_ls[6] << binary_to_7seg:bch.seg_l
+selection_done << selection_done.DB_MAX_OUTPUT_PORT_TYPE
+mode << mode.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |mainModule|ram:ram_inst
@@ -20650,5 +20666,30 @@ sel => Decoder0.IN0
 In_0[0] => data_out.DATAA
 In_1[0] => data_out.DATAB
 data_out[0] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mainModule|binary_to_7seg:bch
+binary_in[0] => Decoder1.IN3
+binary_in[1] => Decoder1.IN2
+binary_in[2] => Decoder1.IN1
+binary_in[3] => Decoder1.IN0
+binary_in[4] => Decoder0.IN3
+binary_in[5] => Decoder0.IN2
+binary_in[6] => Decoder0.IN1
+binary_in[7] => Decoder0.IN0
+seg_h[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_h[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_h[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_h[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_h[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_h[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_h[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_l[0] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
+seg_l[1] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
+seg_l[2] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
+seg_l[3] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
+seg_l[4] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
+seg_l[5] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
+seg_l[6] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
 
 

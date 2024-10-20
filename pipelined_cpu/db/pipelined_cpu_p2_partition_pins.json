@@ -112,7 +112,75 @@
 					"strict" : false
 				},
 				{
+					"name" : "addr_tst_ms[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_tst_ms[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_tst_ms[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_tst_ms[3]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_tst_ms[4]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_tst_ms[5]",
+					"strict" : false
+				},
+				{
+					"name" : "addr_tst_ms[6]",
+					"strict" : false
+				},
+				{
+					"name" : "add_tst_ls[0]",
+					"strict" : false
+				},
+				{
+					"name" : "add_tst_ls[1]",
+					"strict" : false
+				},
+				{
+					"name" : "add_tst_ls[2]",
+					"strict" : false
+				},
+				{
+					"name" : "add_tst_ls[3]",
+					"strict" : false
+				},
+				{
+					"name" : "add_tst_ls[4]",
+					"strict" : false
+				},
+				{
+					"name" : "add_tst_ls[5]",
+					"strict" : false
+				},
+				{
+					"name" : "add_tst_ls[6]",
+					"strict" : false
+				},
+				{
+					"name" : "selection_done",
+					"strict" : false
+				},
+				{
+					"name" : "mode",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "select_btn",
 					"strict" : false
 				},
 				{
@@ -121,10 +189,6 @@
 				},
 				{
 					"name" : "down_btn",
-					"strict" : false
-				},
-				{
-					"name" : "select_btn",
 					"strict" : false
 				}
 			]

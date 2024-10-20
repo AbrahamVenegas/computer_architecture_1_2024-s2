@@ -174,5 +174,41 @@ set_global_assignment -name SYSTEMVERILOG_FILE Mux2to1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE write_32bit_to_ip_ram.sv
 set_location_assignment PIN_AA15 -to down_btn
 set_location_assignment PIN_AA14 -to up_btn
-set_location_assignment PIN_AJ14 -to select_btn
+set_location_assignment PIN_AK4 -to select_btn
+set_global_assignment -name SYSTEMVERILOG_FILE output_files/binary_to_7seg.sv
+set_location_assignment PIN_W17 -to add_tst_ls[0]
+set_location_assignment PIN_V18 -to add_tst_ls[1]
+set_location_assignment PIN_AG17 -to add_tst_ls[2]
+set_location_assignment PIN_AG16 -to add_tst_ls[3]
+set_location_assignment PIN_AH17 -to add_tst_ls[4]
+set_location_assignment PIN_AG18 -to add_tst_ls[5]
+set_location_assignment PIN_AH18 -to add_tst_ls[6]
+set_location_assignment PIN_AF16 -to addr_tst_ms[0]
+set_location_assignment PIN_V16 -to addr_tst_ms[1]
+set_location_assignment PIN_AE16 -to addr_tst_ms[2]
+set_location_assignment PIN_AD17 -to addr_tst_ms[3]
+set_location_assignment PIN_AE18 -to addr_tst_ms[4]
+set_location_assignment PIN_AE17 -to addr_tst_ms[5]
+set_location_assignment PIN_V17 -to addr_tst_ms[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to add_tst_ls[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to add_tst_ls[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to add_tst_ls[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to add_tst_ls[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to add_tst_ls[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to add_tst_ls[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to add_tst_ls[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr_tst_ms[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr_tst_ms[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr_tst_ms[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr_tst_ms[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr_tst_ms[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr_tst_ms[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr_tst_ms[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to select_btn
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to up_btn
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to down_btn
+set_location_assignment PIN_AA24 -to selection_done
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to selection_done
+set_location_assignment PIN_AB23 -to mode
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to mode
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

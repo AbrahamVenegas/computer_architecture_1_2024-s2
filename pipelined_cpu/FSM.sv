@@ -10,7 +10,7 @@ module FSM(
 	//edge detection for 'next' signal
 	always_ff @(posedge clk, posedge rst) begin
 		if(rst) begin
-			prev_next <=1'b0;
+			prev_next <=2'b0;
 		end else begin
 			prev_next <= next;
 		end

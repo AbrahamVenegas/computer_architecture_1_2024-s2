@@ -1,9 +1,9 @@
 module write_32bit_to_ip_ram (
-    input wire [31:0] data_in,         // 32-bit input data
-    input wire [18:0] address,         // 19-bit base address
-    input wire write_enable,           // Enable write operation
-    input wire clk,                    // Clock signal
-    output reg done,                    // Write complete flag
+    input logic [31:0] data_in,         // 32-bit input data
+    input logic [18:0] address,         // 19-bit base address
+    input logic write_enable,           // Enable write operation
+    input logic clk,                    // Clock signal
+    output logic done,                    // Write complete flag
 	 output logic [18:0] ram_address,
 	 output logic [7:0]  ram_writedata,
 	 output logic 			ram_write_enable

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pipelined_cpu_p2
-Sat Oct 19 22:48:46 2024
+Sun Oct 20 14:14:06 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -19,25 +19,26 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
  11. State Machine - |mainModule|write_32bit_to_ip_ram:selection_write|byte_counter
  12. State Machine - |mainModule|FSM:control|state
  13. Registers Removed During Synthesis
- 14. General Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated
- 17. Parameter Settings for User Entity Instance: ram:ram_inst|altsyncram:altsyncram_component
- 18. Parameter Settings for User Entity Instance: VGA_Main_Module:vga|ImageDrawer:imgDrawer
- 19. Parameter Settings for User Entity Instance: Mux2to1:ram_address_a_mux
- 20. Parameter Settings for User Entity Instance: Mux2to1:ram_writedata_a_mux
- 21. Parameter Settings for User Entity Instance: Mux2to1:ram_write_enables_mux
- 22. altsyncram Parameter Settings by Entity Instance
- 23. Port Connectivity Checks: "Mux2to1:ram_writedata_a_mux"
- 24. Port Connectivity Checks: "Mux2to1:ram_address_a_mux"
- 25. Port Connectivity Checks: "write_32bit_to_ip_ram:selection_write"
- 26. Port Connectivity Checks: "FSM:control"
- 27. Port Connectivity Checks: "upDownCounter:quadrantCounter"
- 28. Port Connectivity Checks: "ram:ram_inst"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
- 32. Analysis & Synthesis Suppressed Messages
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated
+ 18. Parameter Settings for User Entity Instance: ram:ram_inst|altsyncram:altsyncram_component
+ 19. Parameter Settings for User Entity Instance: VGA_Main_Module:vga|ImageDrawer:imgDrawer
+ 20. Parameter Settings for User Entity Instance: Mux2to1:ram_address_a_mux
+ 21. Parameter Settings for User Entity Instance: Mux2to1:ram_writedata_a_mux
+ 22. Parameter Settings for User Entity Instance: Mux2to1:ram_write_enables_mux
+ 23. altsyncram Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "Mux2to1:ram_write_enables_mux"
+ 25. Port Connectivity Checks: "Mux2to1:ram_address_a_mux"
+ 26. Port Connectivity Checks: "write_32bit_to_ip_ram:selection_write"
+ 27. Port Connectivity Checks: "FSM:control"
+ 28. Port Connectivity Checks: "upDownCounter:quadrantCounter"
+ 29. Port Connectivity Checks: "ram:ram_inst"
+ 30. Post-Synthesis Netlist Statistics for Top Partition
+ 31. Elapsed Time Per Partition
+ 32. Analysis & Synthesis Messages
+ 33. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -64,14 +65,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Oct 19 22:48:46 2024       ;
+; Analysis & Synthesis Status     ; Successful - Sun Oct 20 14:14:06 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; pipelined_cpu_p2                            ;
 ; Top-level Entity Name           ; mainModule                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 50                                          ;
-; Total pins                      ; 33                                          ;
+; Total registers                 ; 60                                          ;
+; Total pins                      ; 49                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,194,304                                   ;
 ; Total DSP Blocks                ; 5                                           ;
@@ -190,36 +191,37 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
-+----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                        ; Library ;
-+----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
-; mainModule.sv                    ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv            ;         ;
-; ram_init_data.mif                ; yes             ; User Memory Initialization File  ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram_init_data.mif        ;         ;
-; VGA_Main_Module.sv               ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv       ;         ;
-; GraphicsController.sv            ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv    ;         ;
-; pll.sv                           ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv                   ;         ;
-; ram.v                            ; yes             ; User Wizard-Generated File       ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v                    ;         ;
-; ImageDrawer.sv                   ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv           ;         ;
-; upDownCounter.sv                 ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv         ;         ;
-; FSM.sv                           ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv                   ;         ;
-; Mux2to1.sv                       ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv               ;         ;
-; write_32bit_to_ip_ram.sv         ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                      ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                               ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                         ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                      ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                      ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                       ;         ;
-; altrom.inc                       ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                          ;         ;
-; altram.inc                       ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altram.inc                                          ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                        ;         ;
-; db/altsyncram_qap2.tdf           ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/altsyncram_qap2.tdf   ;         ;
-; db/decode_2na.tdf                ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/decode_2na.tdf        ;         ;
-; db/decode_r2a.tdf                ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/decode_r2a.tdf        ;         ;
-; db/mux_ihb.tdf                   ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/mux_ihb.tdf           ;         ;
-+----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                      ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                              ; Library ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
+; mainModule.sv                    ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv                  ;         ;
+; ram_init_data.mif                ; yes             ; User Memory Initialization File  ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram_init_data.mif              ;         ;
+; VGA_Main_Module.sv               ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv             ;         ;
+; GraphicsController.sv            ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv          ;         ;
+; pll.sv                           ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv                         ;         ;
+; ram.v                            ; yes             ; User Wizard-Generated File       ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v                          ;         ;
+; ImageDrawer.sv                   ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv                 ;         ;
+; upDownCounter.sv                 ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv               ;         ;
+; FSM.sv                           ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv                         ;         ;
+; Mux2to1.sv                       ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv                     ;         ;
+; write_32bit_to_ip_ram.sv         ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv       ;         ;
+; output_files/binary_to_7seg.sv   ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files/binary_to_7seg.sv ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                            ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                     ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                               ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                            ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                            ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                             ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                              ;         ;
+; db/altsyncram_qap2.tdf           ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/altsyncram_qap2.tdf         ;         ;
+; db/decode_2na.tdf                ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/decode_2na.tdf              ;         ;
+; db/decode_r2a.tdf                ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/decode_r2a.tdf              ;         ;
+; db/mux_ihb.tdf                   ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/mux_ihb.tdf                 ;         ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -227,27 +229,27 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 401       ;
+; Estimate of Logic utilization (ALMs needed) ; 418       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 488       ;
+; Combinational ALUT usage for logic          ; 522       ;
 ;     -- 7 input functions                    ; 14        ;
 ;     -- 6 input functions                    ; 297       ;
-;     -- 5 input functions                    ; 22        ;
-;     -- 4 input functions                    ; 35        ;
-;     -- <=3 input functions                  ; 120       ;
+;     -- 5 input functions                    ; 26        ;
+;     -- 4 input functions                    ; 53        ;
+;     -- <=3 input functions                  ; 132       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 50        ;
+; Dedicated logic registers                   ; 60        ;
 ;                                             ;           ;
-; I/O pins                                    ; 33        ;
+; I/O pins                                    ; 49        ;
 ; Total MLAB memory bits                      ; 0         ;
 ; Total block memory bits                     ; 4194304   ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 5         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 542       ;
-; Total fan-out                               ; 11367     ;
-; Average fan-out                             ; 10.14     ;
+; Maximum fan-out                             ; 552       ;
+; Total fan-out                               ; 12494     ;
+; Average fan-out                             ; 10.44     ;
 +---------------------------------------------+-----------+
 
 
@@ -256,19 +258,23 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Entity Name           ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
-; |mainModule                                ; 488 (1)             ; 50 (2)                    ; 4194304           ; 5          ; 33   ; 0            ; |mainModule                                                                                                      ; mainModule            ; work         ;
-;    |FSM:control|                           ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|FSM:control                                                                                          ; FSM                   ; work         ;
-;    |VGA_Main_Module:vga|                   ; 241 (0)             ; 21 (0)                    ; 0                 ; 2          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga                                                                                  ; VGA_Main_Module       ; work         ;
-;       |GraphicsController:controller|      ; 27 (27)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga|GraphicsController:controller                                                    ; GraphicsController    ; work         ;
-;       |ImageDrawer:imgDrawer|              ; 213 (213)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga|ImageDrawer:imgDrawer                                                            ; ImageDrawer           ; work         ;
+; |mainModule                                ; 522 (1)             ; 60 (2)                    ; 4194304           ; 5          ; 49   ; 0            ; |mainModule                                                                                                      ; mainModule            ; work         ;
+;    |FSM:control|                           ; 4 (4)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|FSM:control                                                                                          ; FSM                   ; work         ;
+;    |Mux2to1:ram_address_a_mux|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|Mux2to1:ram_address_a_mux                                                                            ; Mux2to1               ; work         ;
+;    |Mux2to1:ram_write_enables_mux|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|Mux2to1:ram_write_enables_mux                                                                        ; Mux2to1               ; work         ;
+;    |Mux2to1:ram_writedata_a_mux|           ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|Mux2to1:ram_writedata_a_mux                                                                          ; Mux2to1               ; work         ;
+;    |VGA_Main_Module:vga|                   ; 239 (0)             ; 21 (0)                    ; 0                 ; 2          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga                                                                                  ; VGA_Main_Module       ; work         ;
+;       |GraphicsController:controller|      ; 28 (28)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga|GraphicsController:controller                                                    ; GraphicsController    ; work         ;
+;       |ImageDrawer:imgDrawer|              ; 210 (210)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga|ImageDrawer:imgDrawer                                                            ; ImageDrawer           ; work         ;
 ;       |pll:vgapll|                         ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga|pll:vgapll                                                                       ; pll                   ; work         ;
+;    |binary_to_7seg:bch|                    ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|binary_to_7seg:bch                                                                                   ; binary_to_7seg        ; work         ;
 ;    |ram:ram_inst|                          ; 234 (0)             ; 12 (0)                    ; 4194304           ; 0          ; 0    ; 0            ; |mainModule|ram:ram_inst                                                                                         ; ram                   ; work         ;
 ;       |altsyncram:altsyncram_component|    ; 234 (0)             ; 12 (0)                    ; 4194304           ; 0          ; 0    ; 0            ; |mainModule|ram:ram_inst|altsyncram:altsyncram_component                                                         ; altsyncram            ; work         ;
 ;          |altsyncram_qap2:auto_generated|  ; 234 (0)             ; 12 (12)                   ; 4194304           ; 0          ; 0    ; 0            ; |mainModule|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated                          ; altsyncram_qap2       ; work         ;
 ;             |decode_r2a:rden_decode_b|     ; 66 (66)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|decode_r2a:rden_decode_b ; decode_r2a            ; work         ;
 ;             |mux_ihb:mux5|                 ; 168 (168)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|mux_ihb:mux5             ; mux_ihb               ; work         ;
 ;    |upDownCounter:quadrantCounter|         ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|upDownCounter:quadrantCounter                                                                        ; upDownCounter         ; work         ;
-;    |write_32bit_to_ip_ram:selection_write| ; 4 (4)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|write_32bit_to_ip_ram:selection_write                                                                ; write_32bit_to_ip_ram ; work         ;
+;    |write_32bit_to_ip_ram:selection_write| ; 13 (13)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |mainModule|write_32bit_to_ip_ram:selection_write                                                                ; write_32bit_to_ip_ram ; work         ;
 +--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -331,18 +337,51 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+----------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                            ;
-+------------------------------------------------------+----------------------------------------+
-; Register name                                        ; Reason for Removal                     ;
-+------------------------------------------------------+----------------------------------------+
-; write_32bit_to_ip_ram:selection_write|byte_counter~2 ; Lost fanout                            ;
-; write_32bit_to_ip_ram:selection_write|byte_counter~3 ; Lost fanout                            ;
-; FSM:control|state~4                                  ; Lost fanout                            ;
-; FSM:control|state~5                                  ; Lost fanout                            ;
-; FSM:control|state.11                                 ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 5                ;                                        ;
-+------------------------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                           ;
++-----------------------------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                                       ; Reason for Removal                     ;
++-----------------------------------------------------------------------------------------------------+----------------------------------------+
+; write_32bit_to_ip_ram:selection_write|ram_address[2,3,18]                                           ; Stuck at GND due to stuck port data_in ;
+; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|address_reg_a[5]        ; Stuck at GND due to stuck port data_in ;
+; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|out_address_reg_a[5]    ; Stuck at GND due to stuck port data_in ;
+; write_32bit_to_ip_ram:selection_write|ram_address[4]                                                ; Stuck at VCC due to stuck port data_in ;
+; write_32bit_to_ip_ram:selection_write|ram_address[5]                                                ; Stuck at GND due to stuck port data_in ;
+; write_32bit_to_ip_ram:selection_write|ram_address[6]                                                ; Stuck at VCC due to stuck port data_in ;
+; write_32bit_to_ip_ram:selection_write|ram_address[7,8]                                              ; Stuck at GND due to stuck port data_in ;
+; write_32bit_to_ip_ram:selection_write|ram_address[9..11]                                            ; Stuck at VCC due to stuck port data_in ;
+; write_32bit_to_ip_ram:selection_write|ram_address[12..15]                                           ; Stuck at GND due to stuck port data_in ;
+; write_32bit_to_ip_ram:selection_write|ram_address[16,17]                                            ; Stuck at VCC due to stuck port data_in ;
+; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|address_reg_a[3,4]      ; Stuck at VCC due to stuck port data_in ;
+; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|address_reg_a[0..2]     ; Stuck at GND due to stuck port data_in ;
+; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|out_address_reg_a[3,4]  ; Stuck at VCC due to stuck port data_in ;
+; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|out_address_reg_a[0..2] ; Stuck at GND due to stuck port data_in ;
+; write_32bit_to_ip_ram:selection_write|byte_counter~2                                                ; Lost fanout                            ;
+; write_32bit_to_ip_ram:selection_write|byte_counter~3                                                ; Lost fanout                            ;
+; FSM:control|state~4                                                                                 ; Lost fanout                            ;
+; FSM:control|state~5                                                                                 ; Lost fanout                            ;
+; Total Number of Removed Registers = 33                                                              ;                                        ;
++-----------------------------------------------------------------------------------------------------+----------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                          ;
++-------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------------------+
+; Register name                                         ; Reason for Removal        ; Registers Removed due to This Register                                                           ;
++-------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------------------+
+; write_32bit_to_ip_ram:selection_write|ram_address[18] ; Stuck at GND              ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|address_reg_a[5],    ;
+;                                                       ; due to stuck port data_in ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|out_address_reg_a[5] ;
+; write_32bit_to_ip_ram:selection_write|ram_address[13] ; Stuck at GND              ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|address_reg_a[0],    ;
+;                                                       ; due to stuck port data_in ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|out_address_reg_a[0] ;
+; write_32bit_to_ip_ram:selection_write|ram_address[14] ; Stuck at GND              ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|address_reg_a[1],    ;
+;                                                       ; due to stuck port data_in ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|out_address_reg_a[1] ;
+; write_32bit_to_ip_ram:selection_write|ram_address[15] ; Stuck at GND              ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|address_reg_a[2],    ;
+;                                                       ; due to stuck port data_in ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|out_address_reg_a[2] ;
+; write_32bit_to_ip_ram:selection_write|ram_address[16] ; Stuck at VCC              ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|address_reg_a[3],    ;
+;                                                       ; due to stuck port data_in ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|out_address_reg_a[3] ;
+; write_32bit_to_ip_ram:selection_write|ram_address[17] ; Stuck at VCC              ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|address_reg_a[4],    ;
+;                                                       ; due to stuck port data_in ; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|out_address_reg_a[4] ;
++-------------------------------------------------------+---------------------------+--------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -350,12 +389,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 50    ;
-; Number of registers using Synchronous Clear  ; 20    ;
+; Total registers                              ; 60    ;
+; Number of registers using Synchronous Clear  ; 21    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Clock Enable       ; 28    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -365,8 +404,9 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |mainModule|write_32bit_to_ip_ram:selection_write|ram_writedata[0]                                                        ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mainModule|VGA_Main_Module:vga|ImageDrawer:imgDrawer|red[1]                                                              ;
-; 5:1                ; 19 bits   ; 57 LEs        ; 57 LEs               ; 0 LEs                  ; No         ; |mainModule|VGA_Main_Module:vga|ImageDrawer:imgDrawer|memory_addr[14]                                                     ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 57 LEs               ; 0 LEs                  ; No         ; |mainModule|VGA_Main_Module:vga|ImageDrawer:imgDrawer|memory_addr[3]                                                      ;
 ; 64:1               ; 8 bits    ; 336 LEs       ; 336 LEs              ; 0 LEs                  ; No         ; |mainModule|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|mux_ihb:mux5|l6_w0_n0_mux_dataout ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------+
 
@@ -514,48 +554,58 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Mux2to1:ram_writedata_a_mux"                                                                                                                ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; In_0 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "In_0[7..1]" will be connected to GND. ;
-; In_1 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "In_1[7..1]" will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "Mux2to1:ram_write_enables_mux" ;
++------+-------+----------+---------------------------------+
+; Port ; Type  ; Severity ; Details                         ;
++------+-------+----------+---------------------------------+
+; In_1 ; Input ; Info     ; Stuck at GND                    ;
++------+-------+----------+---------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Mux2to1:ram_address_a_mux"                                                                                                                    ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                        ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
-; In_0 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (19 bits) it drives.  Extra input bit(s) "In_0[18..1]" will be connected to GND. ;
-; In_1 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (19 bits) it drives.  Extra input bit(s) "In_1[18..1]" will be connected to GND. ;
-+------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------+
+; Port Connectivity Checks: "Mux2to1:ram_address_a_mux" ;
++--------------+-------+----------+---------------------+
+; Port         ; Type  ; Severity ; Details             ;
++--------------+-------+----------+---------------------+
+; In_1[17..16] ; Input ; Info     ; Stuck at VCC        ;
+; In_1[11..9]  ; Input ; Info     ; Stuck at VCC        ;
+; In_1[15..12] ; Input ; Info     ; Stuck at GND        ;
+; In_1[8..7]   ; Input ; Info     ; Stuck at GND        ;
+; In_1[3..0]   ; Input ; Info     ; Stuck at GND        ;
+; In_1[18]     ; Input ; Info     ; Stuck at GND        ;
+; In_1[6]      ; Input ; Info     ; Stuck at VCC        ;
+; In_1[5]      ; Input ; Info     ; Stuck at GND        ;
+; In_1[4]      ; Input ; Info     ; Stuck at VCC        ;
++--------------+-------+----------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "write_32bit_to_ip_ram:selection_write"                                                                                                                                                         ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                                                                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; data_in[31..19] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                        ;
-; address         ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (19 bits) it drives.  The 13 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; done            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; ram_address     ; Output ; Warning  ; Output or bidir port (19 bits) is wider than the port expression (1 bits) it drives; bit(s) "ram_address[18..1]" have no fanouts                                                    ;
-; ram_writedata   ; Output ; Warning  ; Output or bidir port (8 bits) is wider than the port expression (1 bits) it drives; bit(s) "ram_writedata[7..1]" have no fanouts                                                    ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "write_32bit_to_ip_ram:selection_write" ;
++-----------------+-------+----------+------------------------------+
+; Port            ; Type  ; Severity ; Details                      ;
++-----------------+-------+----------+------------------------------+
+; data_in[31..19] ; Input ; Info     ; Stuck at GND                 ;
+; address[17..16] ; Input ; Info     ; Stuck at VCC                 ;
+; address[11..9]  ; Input ; Info     ; Stuck at VCC                 ;
+; address[15..12] ; Input ; Info     ; Stuck at GND                 ;
+; address[8..7]   ; Input ; Info     ; Stuck at GND                 ;
+; address[3..0]   ; Input ; Info     ; Stuck at GND                 ;
+; address[18]     ; Input ; Info     ; Stuck at GND                 ;
+; address[6]      ; Input ; Info     ; Stuck at VCC                 ;
+; address[5]      ; Input ; Info     ; Stuck at GND                 ;
+; address[4]      ; Input ; Info     ; Stuck at VCC                 ;
++-----------------+-------+----------+------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FSM:control"                                                                                                                                                                            ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type  ; Severity ; Details                                                                                                                                                                            ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; rst        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; rst[-1]    ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; write_done ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND.                                       ;
-+------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FSM:control"                                                                                                                                                                         ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rst     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rst[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -568,15 +618,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ram:ram_inst"                                                                                              ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                  ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; data_b ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; wren_b ; Input  ; Info     ; Stuck at GND                                                                                             ;
-; q_a    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+----------------------------------------------------------------------------------------------------------+
++------------------------------------------+
+; Port Connectivity Checks: "ram:ram_inst" ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; data_b ; Input ; Info     ; Stuck at GND ;
+; wren_b ; Input ; Info     ; Stuck at GND ;
++--------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -584,32 +633,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 50                          ;
-;     ENA               ; 10                          ;
+; arriav_ff             ; 60                          ;
+;     ENA               ; 18                          ;
 ;     ENA SCLR          ; 10                          ;
-;     SCLR              ; 10                          ;
-;     plain             ; 20                          ;
-; arriav_lcell_comb     ; 489                         ;
+;     SCLR              ; 11                          ;
+;     plain             ; 21                          ;
+; arriav_lcell_comb     ; 525                         ;
 ;     arith             ; 99                          ;
 ;         0 data inputs ; 7                           ;
 ;         1 data inputs ; 90                          ;
 ;         2 data inputs ; 2                           ;
 ;     extend            ; 14                          ;
 ;         7 data inputs ; 14                          ;
-;     normal            ; 376                         ;
+;     normal            ; 412                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 7                           ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 18                          ;
 ;         3 data inputs ; 9                           ;
-;         4 data inputs ; 35                          ;
-;         5 data inputs ; 22                          ;
+;         4 data inputs ; 53                          ;
+;         5 data inputs ; 26                          ;
 ;         6 data inputs ; 297                         ;
 ; arriav_mac            ; 5                           ;
-; boundary_port         ; 33                          ;
+; boundary_port         ; 49                          ;
 ; stratixv_ram_block    ; 512                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.70                        ;
-; Average LUT depth     ; 4.59                        ;
+; Average LUT depth     ; 4.43                        ;
 +-----------------------+-----------------------------+
 
 
@@ -628,11 +677,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Oct 19 22:48:39 2024
+    Info: Processing started: Sun Oct 20 14:13:58 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipelined_cpu_p2 -c pipelined_cpu_p2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (10275): Verilog HDL Module Instantiation warning at mainModule.sv(70): ignored dangling comma in List of Port Connections File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 70
 Info (12021): Found 1 design units, including 1 entities, in source file mainModule.sv
     Info (12023): Found entity 1: mainModule File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
@@ -693,12 +741,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file Mux2to1
     Info (12023): Found entity 1: Mux2to1 File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file write_32bit_to_ip_ram.sv
     Info (12023): Found entity 1: write_32bit_to_ip_ram File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/binary_to_7seg.sv
+    Info (12023): Found entity 1: binary_to_7seg File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files/binary_to_7seg.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at controller.sv(88): created implicit net for "PCSrcGatedE" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/controller.sv Line: 88
 Info (12127): Elaborating entity "mainModule" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at mainModule.sv(109): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 109
-Warning (10230): Verilog HDL assignment warning at mainModule.sv(110): truncated value with size 32 to match size of target (9) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 110
-Warning (10230): Verilog HDL assignment warning at mainModule.sv(111): truncated value with size 32 to match size of target (9) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 111
-Info (12128): Elaborating entity "ram" for hierarchy "ram:ram_inst" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 38
+Warning (10230): Verilog HDL assignment warning at mainModule.sv(120): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 120
+Warning (10230): Verilog HDL assignment warning at mainModule.sv(121): truncated value with size 32 to match size of target (9) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 121
+Warning (10230): Verilog HDL assignment warning at mainModule.sv(122): truncated value with size 32 to match size of target (9) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 122
+Info (12128): Elaborating entity "ram" for hierarchy "ram:ram_inst" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 43
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:ram_inst|altsyncram:altsyncram_component" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v Line: 98
 Info (12130): Elaborated megafunction instantiation "ram:ram_inst|altsyncram:altsyncram_component" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v Line: 98
 Info (12133): Instantiated megafunction "ram:ram_inst|altsyncram:altsyncram_component" with the following parameter: File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v Line: 98
@@ -741,24 +791,26 @@ Info (12128): Elaborating entity "decode_r2a" for hierarchy "ram:ram_inst|altsyn
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ihb.tdf
     Info (12023): Found entity 1: mux_ihb File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/mux_ihb.tdf Line: 23
 Info (12128): Elaborating entity "mux_ihb" for hierarchy "ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|mux_ihb:mux4" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/altsyncram_qap2.tdf Line: 55
-Info (12128): Elaborating entity "VGA_Main_Module" for hierarchy "VGA_Main_Module:vga" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 54
+Info (12128): Elaborating entity "VGA_Main_Module" for hierarchy "VGA_Main_Module:vga" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 59
 Info (12128): Elaborating entity "pll" for hierarchy "VGA_Main_Module:vga|pll:vgapll" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv Line: 14
 Info (12128): Elaborating entity "ImageDrawer" for hierarchy "VGA_Main_Module:vga|ImageDrawer:imgDrawer" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv Line: 26
 Warning (10230): Verilog HDL assignment warning at ImageDrawer.sv(58): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv Line: 58
 Warning (10230): Verilog HDL assignment warning at ImageDrawer.sv(67): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv Line: 67
 Info (12128): Elaborating entity "GraphicsController" for hierarchy "VGA_Main_Module:vga|GraphicsController:controller" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv Line: 36
-Info (12128): Elaborating entity "upDownCounter" for hierarchy "upDownCounter:quadrantCounter" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 62
+Info (12128): Elaborating entity "upDownCounter" for hierarchy "upDownCounter:quadrantCounter" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 67
 Warning (10230): Verilog HDL assignment warning at upDownCounter.sv(14): truncated value with size 32 to match size of target (4) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv Line: 14
 Warning (10230): Verilog HDL assignment warning at upDownCounter.sv(16): truncated value with size 32 to match size of target (4) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv Line: 16
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:control" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 70
-Info (12128): Elaborating entity "write_32bit_to_ip_ram" for hierarchy "write_32bit_to_ip_ram:selection_write" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 82
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:control" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 76
+Warning (10230): Verilog HDL assignment warning at FSM.sv(13): truncated value with size 2 to match size of target (1) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv Line: 13
+Info (12128): Elaborating entity "write_32bit_to_ip_ram" for hierarchy "write_32bit_to_ip_ram:selection_write" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 88
 Warning (10230): Verilog HDL assignment warning at write_32bit_to_ip_ram.sv(23): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv Line: 23
 Warning (10230): Verilog HDL assignment warning at write_32bit_to_ip_ram.sv(29): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv Line: 29
 Warning (10230): Verilog HDL assignment warning at write_32bit_to_ip_ram.sv(35): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv Line: 35
-Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_address_a_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 89
-Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_writedata_a_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 96
-Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_write_enables_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 103
-Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_address_a_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 95
+Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_writedata_a_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 102
+Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_write_enables_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 109
+Info (12128): Elaborating entity "binary_to_7seg" for hierarchy "binary_to_7seg:bch" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 114
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "sync_blank" is stuck at GND File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 3
     Warning (13410): Pin "sync_b" is stuck at VCC File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 3
@@ -767,16 +819,16 @@ Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files/pipelined_cpu_p2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1077 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1126 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 527 logic cells
+    Info (21059): Implemented 45 output pins
+    Info (21061): Implemented 560 logic cells
     Info (21064): Implemented 512 RAM segments
     Info (21062): Implemented 5 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 520 megabytes
-    Info: Processing ended: Sat Oct 19 22:48:46 2024
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 513 megabytes
+    Info: Processing ended: Sun Oct 20 14:14:06 2024
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:06
 
 
