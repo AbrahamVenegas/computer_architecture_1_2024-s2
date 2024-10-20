@@ -25,6 +25,7 @@ module mainModule(input  logic clk,
 	 logic selection_address_signal;
 	 logic cpu_data_a_signal;
 	 logic selection_data_a_signal;
+	 logic prev_up, prev_down;
 	 ram	ram_inst (
 		 .address_a ( address_a_sig ),
 		 .address_b ( address_b_sig ),
@@ -54,9 +55,9 @@ module mainModule(input  logic clk,
 	 
 	 upDownCounter quadrantCounter(
 		.clk(clk),
-		.reset_n(0),
-		.up(up_btn),
-		.down(down_btn),
+		.reset_n(1),
+		.up(~up_btn && prev_up),
+		.down(~down_btn && prev_down),
 		.count(quadrant)
 	 );
 	 
@@ -100,6 +101,11 @@ module mainModule(input  logic clk,
 		.In_1(cpu_wren_signal),
 		.data_out(wren_a_sig)
 		);
+	always_ff @(posedge clk) begin
+		
+			prev_up   <= up_btn;
+			prev_down <= down_btn;		
+	end
 	 assign selection_addr_data = h_offset + 400*v_offset;
 	 assign h_offset = (quadrant % 4)*100;
 	 assign v_offset = ((quadrant-(quadrant % 4))/4)*100;

@@ -23,7 +23,7 @@ module ImageDrawer(
 	parameter IMAGE_2_H 		= 200;
 	
 	parameter s_width			= 100;
-	parameter b_width			= 4;
+	parameter b_width			= 1;
 	
 	logic lef_side;
 	logic upp_side;

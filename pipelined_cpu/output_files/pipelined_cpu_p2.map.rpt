@@ -1,5 +1,5 @@
-Analysis & Elaboration report for pipelined_cpu_p2
-Sat Oct 19 18:32:22 2024
+Analysis & Synthesis report for pipelined_cpu_p2
+Sat Oct 19 22:48:46 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -7,25 +7,37 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration IP Cores Summary
-  5. Source assignments for ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated
-  6. Parameter Settings for User Entity Instance: ram:ram_inst|altsyncram:altsyncram_component
-  7. Parameter Settings for User Entity Instance: VGA_Main_Module:vga|ImageDrawer:imgDrawer
-  8. Parameter Settings for User Entity Instance: Mux2to1:ram_address_a_mux
-  9. Parameter Settings for User Entity Instance: Mux2to1:ram_writedata_a_mux
- 10. Parameter Settings for User Entity Instance: Mux2to1:ram_write_enables_mux
- 11. altsyncram Parameter Settings by Entity Instance
- 12. Analysis & Elaboration Settings
- 13. Port Connectivity Checks: "Mux2to1:ram_writedata_a_mux"
- 14. Port Connectivity Checks: "Mux2to1:ram_address_a_mux"
- 15. Port Connectivity Checks: "write_32bit_to_ip_ram:selection_write"
- 16. Port Connectivity Checks: "FSM:control"
- 17. Port Connectivity Checks: "upDownCounter:quadrantCounter"
- 18. Port Connectivity Checks: "ram:ram_inst"
- 19. Analysis & Elaboration Messages
- 20. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Analysis & Synthesis IP Cores Summary
+ 11. State Machine - |mainModule|write_32bit_to_ip_ram:selection_write|byte_counter
+ 12. State Machine - |mainModule|FSM:control|state
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated
+ 17. Parameter Settings for User Entity Instance: ram:ram_inst|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: VGA_Main_Module:vga|ImageDrawer:imgDrawer
+ 19. Parameter Settings for User Entity Instance: Mux2to1:ram_address_a_mux
+ 20. Parameter Settings for User Entity Instance: Mux2to1:ram_writedata_a_mux
+ 21. Parameter Settings for User Entity Instance: Mux2to1:ram_write_enables_mux
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "Mux2to1:ram_writedata_a_mux"
+ 24. Port Connectivity Checks: "Mux2to1:ram_address_a_mux"
+ 25. Port Connectivity Checks: "write_32bit_to_ip_ram:selection_write"
+ 26. Port Connectivity Checks: "FSM:control"
+ 27. Port Connectivity Checks: "upDownCounter:quadrantCounter"
+ 28. Port Connectivity Checks: "ram:ram_inst"
+ 29. Post-Synthesis Netlist Statistics for Top Partition
+ 30. Elapsed Time Per Partition
+ 31. Analysis & Synthesis Messages
+ 32. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -49,22 +61,114 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sat Oct 19 18:32:22 2024       ;
-; Quartus Prime Version         ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
-; Revision Name                 ; pipelined_cpu_p2                            ;
-; Top-level Entity Name         ; mainModule                                  ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sat Oct 19 22:48:46 2024       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; pipelined_cpu_p2                            ;
+; Top-level Entity Name           ; mainModule                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 50                                          ;
+; Total pins                      ; 33                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 4,194,304                                   ;
+; Total DSP Blocks                ; 5                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
+; Top-level entity name                                                           ; mainModule         ; pipelined_cpu_p2   ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -76,20 +180,195 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                                                        ; Library ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+; mainModule.sv                    ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv            ;         ;
+; ram_init_data.mif                ; yes             ; User Memory Initialization File  ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram_init_data.mif        ;         ;
+; VGA_Main_Module.sv               ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv       ;         ;
+; GraphicsController.sv            ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv    ;         ;
+; pll.sv                           ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv                   ;         ;
+; ram.v                            ; yes             ; User Wizard-Generated File       ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v                    ;         ;
+; ImageDrawer.sv                   ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv           ;         ;
+; upDownCounter.sv                 ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv         ;         ;
+; FSM.sv                           ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv                   ;         ;
+; Mux2to1.sv                       ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv               ;         ;
+; write_32bit_to_ip_ram.sv         ; yes             ; User SystemVerilog HDL File      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                      ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                               ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                         ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                      ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                      ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                       ;         ;
+; altrom.inc                       ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                          ;         ;
+; altram.inc                       ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altram.inc                                          ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                     ; /home/abner/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                        ;         ;
+; db/altsyncram_qap2.tdf           ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/altsyncram_qap2.tdf   ;         ;
+; db/decode_2na.tdf                ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/decode_2na.tdf        ;         ;
+; db/decode_r2a.tdf                ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/decode_r2a.tdf        ;         ;
+; db/mux_ihb.tdf                   ; yes             ; Auto-Generated Megafunction      ; /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/mux_ihb.tdf           ;         ;
++----------------------------------+-----------------+----------------------------------+---------------------------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 401       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 488       ;
+;     -- 7 input functions                    ; 14        ;
+;     -- 6 input functions                    ; 297       ;
+;     -- 5 input functions                    ; 22        ;
+;     -- 4 input functions                    ; 35        ;
+;     -- <=3 input functions                  ; 120       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 50        ;
+;                                             ;           ;
+; I/O pins                                    ; 33        ;
+; Total MLAB memory bits                      ; 0         ;
+; Total block memory bits                     ; 4194304   ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 5         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 542       ;
+; Total fan-out                               ; 11367     ;
+; Average fan-out                             ; 10.14     ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                           ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                              ; Entity Name           ; Library Name ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+; |mainModule                                ; 488 (1)             ; 50 (2)                    ; 4194304           ; 5          ; 33   ; 0            ; |mainModule                                                                                                      ; mainModule            ; work         ;
+;    |FSM:control|                           ; 2 (2)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|FSM:control                                                                                          ; FSM                   ; work         ;
+;    |VGA_Main_Module:vga|                   ; 241 (0)             ; 21 (0)                    ; 0                 ; 2          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga                                                                                  ; VGA_Main_Module       ; work         ;
+;       |GraphicsController:controller|      ; 27 (27)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga|GraphicsController:controller                                                    ; GraphicsController    ; work         ;
+;       |ImageDrawer:imgDrawer|              ; 213 (213)           ; 0 (0)                     ; 0                 ; 2          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga|ImageDrawer:imgDrawer                                                            ; ImageDrawer           ; work         ;
+;       |pll:vgapll|                         ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|VGA_Main_Module:vga|pll:vgapll                                                                       ; pll                   ; work         ;
+;    |ram:ram_inst|                          ; 234 (0)             ; 12 (0)                    ; 4194304           ; 0          ; 0    ; 0            ; |mainModule|ram:ram_inst                                                                                         ; ram                   ; work         ;
+;       |altsyncram:altsyncram_component|    ; 234 (0)             ; 12 (0)                    ; 4194304           ; 0          ; 0    ; 0            ; |mainModule|ram:ram_inst|altsyncram:altsyncram_component                                                         ; altsyncram            ; work         ;
+;          |altsyncram_qap2:auto_generated|  ; 234 (0)             ; 12 (12)                   ; 4194304           ; 0          ; 0    ; 0            ; |mainModule|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated                          ; altsyncram_qap2       ; work         ;
+;             |decode_r2a:rden_decode_b|     ; 66 (66)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|decode_r2a:rden_decode_b ; decode_r2a            ; work         ;
+;             |mux_ihb:mux5|                 ; 168 (168)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|mux_ihb:mux5             ; mux_ihb               ; work         ;
+;    |upDownCounter:quadrantCounter|         ; 6 (6)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|upDownCounter:quadrantCounter                                                                        ; upDownCounter         ; work         ;
+;    |write_32bit_to_ip_ram:selection_write| ; 4 (4)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |mainModule|write_32bit_to_ip_ram:selection_write                                                                ; write_32bit_to_ip_ram ; work         ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                         ;
++----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+---------+-------------------+
+; Name                                                                                   ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF               ;
++----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+---------+-------------------+
+; ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|ALTSYNCRAM ; AUTO ; True Dual Port ; 524288       ; 8            ; 524288       ; 8            ; 4194304 ; ram_init_data.mif ;
++----------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+---------+-------------------+
+
+
++-----------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary  ;
++---------------------------------+-------------+
+; Statistic                       ; Number Used ;
++---------------------------------+-------------+
+; Independent 9x9                 ; 1           ;
+; Two Independent 18x18           ; 1           ;
+; Independent 18x18 plus 36       ; 3           ;
+; Total number of DSP blocks      ; 5           ;
+;                                 ;             ;
+; Fixed Point Unsigned Multiplier ; 5           ;
++---------------------------------+-------------+
+
+
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration IP Cores Summary                                                                    ;
+; Analysis & Synthesis IP Cores Summary                                                                      ;
 +--------+--------------+---------+--------------+--------------+--------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance          ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+--------------------------+-----------------+
 ; Altera ; RAM: 2-PORT  ; 20.1    ; N/A          ; N/A          ; |mainModule|ram:ram_inst ; ram.v           ;
 +--------+--------------+---------+--------------+--------------+--------------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------+
+; State Machine - |mainModule|write_32bit_to_ip_ram:selection_write|byte_counter          ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; Name            ; byte_counter.11 ; byte_counter.10 ; byte_counter.01 ; byte_counter.00 ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+; byte_counter.00 ; 0               ; 0               ; 0               ; 0               ;
+; byte_counter.01 ; 0               ; 0               ; 1               ; 1               ;
+; byte_counter.10 ; 0               ; 1               ; 0               ; 1               ;
+; byte_counter.11 ; 1               ; 0               ; 0               ; 1               ;
++-----------------+-----------------+-----------------+-----------------+-----------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------+
+; State Machine - |mainModule|FSM:control|state        ;
++----------+----------+----------+----------+----------+
+; Name     ; state.11 ; state.10 ; state.01 ; state.00 ;
++----------+----------+----------+----------+----------+
+; state.00 ; 0        ; 0        ; 0        ; 0        ;
+; state.01 ; 0        ; 0        ; 1        ; 1        ;
+; state.10 ; 0        ; 1        ; 0        ; 1        ;
+; state.11 ; 1        ; 0        ; 0        ; 1        ;
++----------+----------+----------+----------+----------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                            ;
++------------------------------------------------------+----------------------------------------+
+; Register name                                        ; Reason for Removal                     ;
++------------------------------------------------------+----------------------------------------+
+; write_32bit_to_ip_ram:selection_write|byte_counter~2 ; Lost fanout                            ;
+; write_32bit_to_ip_ram:selection_write|byte_counter~3 ; Lost fanout                            ;
+; FSM:control|state~4                                  ; Lost fanout                            ;
+; FSM:control|state~5                                  ; Lost fanout                            ;
+; FSM:control|state.11                                 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 5                ;                                        ;
++------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 50    ;
+; Number of registers using Synchronous Clear  ; 20    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mainModule|VGA_Main_Module:vga|ImageDrawer:imgDrawer|red[1]                                                              ;
+; 5:1                ; 19 bits   ; 57 LEs        ; 57 LEs               ; 0 LEs                  ; No         ; |mainModule|VGA_Main_Module:vga|ImageDrawer:imgDrawer|memory_addr[14]                                                     ;
+; 64:1               ; 8 bits    ; 336 LEs       ; 336 LEs              ; 0 LEs                  ; No         ; |mainModule|ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|mux_ihb:mux5|l6_w0_n0_mux_dataout ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -180,7 +459,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; IMAGE_2_W      ; 200   ; Signed Integer                                                ;
 ; IMAGE_2_H      ; 200   ; Signed Integer                                                ;
 ; s_width        ; 100   ; Signed Integer                                                ;
-; b_width        ; 4     ; Signed Integer                                                ;
+; b_width        ; 1     ; Signed Integer                                                ;
 +----------------+-------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -235,93 +514,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+----------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                          ; Setting            ; Default Value      ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                          ; 5CSXFC6D6F31C6     ;                    ;
-; Top-level entity name                                                           ; mainModule         ; pipelined_cpu_p2   ;
-; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
-; Enable compact report table                                                     ; Off                ; Off                ;
-; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
-; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
-; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
-; Preserve fewer node names                                                       ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
-; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                        ; Auto               ; Auto               ;
-; Safe State Machine                                                              ; Off                ; Off                ;
-; Extract Verilog State Machines                                                  ; On                 ; On                 ;
-; Extract VHDL State Machines                                                     ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
-; Parallel Synthesis                                                              ; On                 ; On                 ;
-; DSP Block Balancing                                                             ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                              ; On                 ; On                 ;
-; Power-Up Don't Care                                                             ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
-; Remove Duplicate Registers                                                      ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
-; Optimization Technique                                                          ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                              ; 70                 ; 70                 ;
-; Auto Carry Chains                                                               ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
-; Auto ROM Replacement                                                            ; On                 ; On                 ;
-; Auto RAM Replacement                                                            ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
-; Strict RAM Replacement                                                          ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                           ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
-; Report Parameter Settings                                                       ; On                 ; On                 ;
-; Report Source Assignments                                                       ; On                 ; On                 ;
-; Report Connectivity Checks                                                      ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
-; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
-; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
-; HDL message level                                                               ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                            ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
-; Block Design Naming                                                             ; Auto               ; Auto               ;
-; SDC constraint protection                                                       ; Off                ; Off                ;
-; Synthesis Effort                                                                ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
-; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
-; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
-+---------------------------------------------------------------------------------+--------------------+--------------------+
-
-
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Mux2to1:ram_writedata_a_mux"                                                                                                                ;
 +------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -372,7 +564,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port        ; Type  ; Severity ; Details                                                                                                                                                                            ;
 +-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; reset_n     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset_n[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; reset_n[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
 +-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -387,17 +579,60 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 50                          ;
+;     ENA               ; 10                          ;
+;     ENA SCLR          ; 10                          ;
+;     SCLR              ; 10                          ;
+;     plain             ; 20                          ;
+; arriav_lcell_comb     ; 489                         ;
+;     arith             ; 99                          ;
+;         0 data inputs ; 7                           ;
+;         1 data inputs ; 90                          ;
+;         2 data inputs ; 2                           ;
+;     extend            ; 14                          ;
+;         7 data inputs ; 14                          ;
+;     normal            ; 376                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 9                           ;
+;         4 data inputs ; 35                          ;
+;         5 data inputs ; 22                          ;
+;         6 data inputs ; 297                         ;
+; arriav_mac            ; 5                           ;
+; boundary_port         ; 33                          ;
+; stratixv_ram_block    ; 512                         ;
+;                       ;                             ;
+; Max LUT depth         ; 7.70                        ;
+; Average LUT depth     ; 4.59                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Oct 19 18:32:18 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipelined_cpu_p2 -c pipelined_cpu_p2 --analysis_and_elaboration
+    Info: Processing started: Sat Oct 19 22:48:39 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipelined_cpu_p2 -c pipelined_cpu_p2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Warning (10275): Verilog HDL Module Instantiation warning at mainModule.sv(69): ignored dangling comma in List of Port Connections File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 69
+Warning (10275): Verilog HDL Module Instantiation warning at mainModule.sv(70): ignored dangling comma in List of Port Connections File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 70
 Info (12021): Found 1 design units, including 1 entities, in source file mainModule.sv
     Info (12023): Found entity 1: mainModule File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
@@ -460,10 +695,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file write_3
     Info (12023): Found entity 1: write_32bit_to_ip_ram File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at controller.sv(88): created implicit net for "PCSrcGatedE" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/controller.sv Line: 88
 Info (12127): Elaborating entity "mainModule" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at mainModule.sv(103): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 103
-Warning (10230): Verilog HDL assignment warning at mainModule.sv(104): truncated value with size 32 to match size of target (9) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 104
-Warning (10230): Verilog HDL assignment warning at mainModule.sv(105): truncated value with size 32 to match size of target (9) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 105
-Info (12128): Elaborating entity "ram" for hierarchy "ram:ram_inst" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 37
+Warning (10230): Verilog HDL assignment warning at mainModule.sv(109): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 109
+Warning (10230): Verilog HDL assignment warning at mainModule.sv(110): truncated value with size 32 to match size of target (9) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 110
+Warning (10230): Verilog HDL assignment warning at mainModule.sv(111): truncated value with size 32 to match size of target (9) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 111
+Info (12128): Elaborating entity "ram" for hierarchy "ram:ram_inst" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 38
 Info (12128): Elaborating entity "altsyncram" for hierarchy "ram:ram_inst|altsyncram:altsyncram_component" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v Line: 98
 Info (12130): Elaborated megafunction instantiation "ram:ram_inst|altsyncram:altsyncram_component" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v Line: 98
 Info (12133): Instantiated megafunction "ram:ram_inst|altsyncram:altsyncram_component" with the following parameter: File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v Line: 98
@@ -506,35 +741,48 @@ Info (12128): Elaborating entity "decode_r2a" for hierarchy "ram:ram_inst|altsyn
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ihb.tdf
     Info (12023): Found entity 1: mux_ihb File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/mux_ihb.tdf Line: 23
 Info (12128): Elaborating entity "mux_ihb" for hierarchy "ram:ram_inst|altsyncram:altsyncram_component|altsyncram_qap2:auto_generated|mux_ihb:mux4" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/db/altsyncram_qap2.tdf Line: 55
-Info (12128): Elaborating entity "VGA_Main_Module" for hierarchy "VGA_Main_Module:vga" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 53
+Info (12128): Elaborating entity "VGA_Main_Module" for hierarchy "VGA_Main_Module:vga" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 54
 Info (12128): Elaborating entity "pll" for hierarchy "VGA_Main_Module:vga|pll:vgapll" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv Line: 14
 Info (12128): Elaborating entity "ImageDrawer" for hierarchy "VGA_Main_Module:vga|ImageDrawer:imgDrawer" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv Line: 26
 Warning (10230): Verilog HDL assignment warning at ImageDrawer.sv(58): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv Line: 58
 Warning (10230): Verilog HDL assignment warning at ImageDrawer.sv(67): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv Line: 67
 Info (12128): Elaborating entity "GraphicsController" for hierarchy "VGA_Main_Module:vga|GraphicsController:controller" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv Line: 36
-Info (12128): Elaborating entity "upDownCounter" for hierarchy "upDownCounter:quadrantCounter" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 61
+Info (12128): Elaborating entity "upDownCounter" for hierarchy "upDownCounter:quadrantCounter" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 62
 Warning (10230): Verilog HDL assignment warning at upDownCounter.sv(14): truncated value with size 32 to match size of target (4) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv Line: 14
 Warning (10230): Verilog HDL assignment warning at upDownCounter.sv(16): truncated value with size 32 to match size of target (4) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv Line: 16
-Info (12128): Elaborating entity "FSM" for hierarchy "FSM:control" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 69
-Info (12128): Elaborating entity "write_32bit_to_ip_ram" for hierarchy "write_32bit_to_ip_ram:selection_write" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 81
+Info (12128): Elaborating entity "FSM" for hierarchy "FSM:control" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 70
+Info (12128): Elaborating entity "write_32bit_to_ip_ram" for hierarchy "write_32bit_to_ip_ram:selection_write" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 82
 Warning (10230): Verilog HDL assignment warning at write_32bit_to_ip_ram.sv(23): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv Line: 23
 Warning (10230): Verilog HDL assignment warning at write_32bit_to_ip_ram.sv(29): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv Line: 29
 Warning (10230): Verilog HDL assignment warning at write_32bit_to_ip_ram.sv(35): truncated value with size 32 to match size of target (19) File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv Line: 35
-Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_address_a_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 88
-Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_writedata_a_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 95
-Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_write_enables_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 102
+Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_address_a_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 89
+Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_writedata_a_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 96
+Info (12128): Elaborating entity "Mux2to1" for hierarchy "Mux2to1:ram_write_enables_mux" File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 103
 Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sync_blank" is stuck at GND File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 3
+    Warning (13410): Pin "sync_b" is stuck at VCC File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 3
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files/pipelined_cpu_p2.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 800 megabytes
-    Info: Processing ended: Sat Oct 19 18:32:22 2024
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1077 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 527 logic cells
+    Info (21064): Implemented 512 RAM segments
+    Info (21062): Implemented 5 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 520 megabytes
+    Info: Processing ended: Sat Oct 19 22:48:46 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
 The suppressed messages can be found in /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files/pipelined_cpu_p2.map.smsg.
 
 

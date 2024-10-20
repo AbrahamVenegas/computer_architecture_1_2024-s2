@@ -1,6 +1,14 @@
 
+State Machine - |mainModule|write_32bit_to_ip_ram:selection_write|byte_counter
+Name byte_counter.11 byte_counter.10 byte_counter.01 byte_counter.00 
+byte_counter.00 0 0 0 0 
+byte_counter.01 0 0 1 1 
+byte_counter.10 0 1 0 1 
+byte_counter.11 1 0 0 1 
+
 State Machine - |mainModule|FSM:control|state
-Name state.00 state.10 state.01 
-state.00 0 0 0 
-state.01 1 0 1 
-state.10 1 1 0 
+Name state.11 state.10 state.01 state.00 
+state.00 0 0 0 0 
+state.01 0 0 1 1 
+state.10 0 1 0 1 
+state.11 1 0 0 1 

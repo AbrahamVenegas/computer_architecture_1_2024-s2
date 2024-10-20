@@ -114,6 +114,18 @@
 				{
 					"name" : "clk",
 					"strict" : false
+				},
+				{
+					"name" : "up_btn",
+					"strict" : false
+				},
+				{
+					"name" : "down_btn",
+					"strict" : false
+				},
+				{
+					"name" : "select_btn",
+					"strict" : false
 				}
 			]
 		}
