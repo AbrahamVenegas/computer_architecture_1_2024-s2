@@ -184,6 +184,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
 					"name" : "up_btn",
 					"strict" : false
 				},

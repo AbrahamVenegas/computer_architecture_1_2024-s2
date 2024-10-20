@@ -1,5 +1,6 @@
 |mainModule
 clk => clk.IN4
+rst => rst.IN1
 up_btn => prev_up.DATAIN
 up_btn => comb.IN1
 down_btn => prev_down.DATAIN

@@ -1,4 +1,4 @@
-module mainModule(input  logic clk,
+module mainModule(input  logic clk, rst,
 	 input logic up_btn, down_btn, select_btn,
     output logic vga_hsync, vga_vsync, sync_blank, sync_b,clk_25,
     output logic [7:0] red, green, blue,
@@ -60,7 +60,7 @@ module mainModule(input  logic clk,
 	 
 	 upDownCounter quadrantCounter(
 		.clk(clk),
-		.reset_n(1),
+		.reset_n(rst),
 		.up(~up_btn && prev_up),
 		.down(~down_btn && prev_down),
 		.count(quadrant)
@@ -68,7 +68,7 @@ module mainModule(input  logic clk,
 	 
 	 FSM control(
 		.clk(clk),
-		.rst(0),
+		.rst(~rst),
 		.next(~select_btn),
 		.mode(mode),
 		.write(selection_write_mode),
