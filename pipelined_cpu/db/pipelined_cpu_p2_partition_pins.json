@@ -114,22 +114,6 @@
 				{
 					"name" : "clk",
 					"strict" : false
-				},
-				{
-					"name" : "quadrant[2]",
-					"strict" : false
-				},
-				{
-					"name" : "quadrant[3]",
-					"strict" : false
-				},
-				{
-					"name" : "quadrant[0]",
-					"strict" : false
-				},
-				{
-					"name" : "quadrant[1]",
-					"strict" : false
 				}
 			]
 		}

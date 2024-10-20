@@ -5,19 +5,21 @@
 
 
 .section .data
-    interp_matrix   .word   16
-    esquina_si      .word   0
-    esquina_sd      .word   0
-    esquina_ii      .word   0
-    esquina_id      .word   0
+    interp_matrix   .word   16 //0x30D40
+    esquina_si      .word   0 //0x30E40
+    esquina_sd      .word   0 //0x30E44
+    esquina_ii      .word   0 //0x30E48
+    esquina_id      .word   0 //0x30E4C
+    src_image_addr  .word   0 //0x30E50
 .section .bss
 
-    src_image:      .word    IMAGE_SIZE
-    improved_image: .space   
+    src_image:      .word    IMAGE_SIZE //[0x30E50]
+    improved_image: .space              //0x27100
 .section .text
 
 _start: 
-    ldr r0, image
+    ldr r0, =src_image_addr
+    ldr, r0, [r0]
     mov r1, #0      @chunk counter
     mov r2, #0      @y offset
 loop_image:
