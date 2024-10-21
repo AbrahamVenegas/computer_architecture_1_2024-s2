@@ -1,0 +1,11 @@
+module pll(
+	input logic inclk,
+	output logic outclk
+);
+	
+	
+	always_ff @(posedge inclk) begin
+		outclk <= ~inclk;
+	end
+	
+	endmodule

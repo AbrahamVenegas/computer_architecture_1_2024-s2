@@ -1,0 +1,71 @@
+`timescale 1ns/1ps
+
+module tb_ram_read;
+
+  // Parameters
+  parameter ADDR_WIDTH = 19;
+  parameter DATA_WIDTH = 8;
+
+  // Inputs
+  reg [ADDR_WIDTH-1:0] address_a;
+  reg [ADDR_WIDTH-1:0] address_b;
+  reg clock;
+
+  // Outputs
+  wire [DATA_WIDTH-1:0] q_a;
+  wire [DATA_WIDTH-1:0] q_b;
+
+  // Instantiate the Unit Under Test (UUT)
+  ram uut (
+    .address_a(address_a),
+    .address_b(address_b),
+    .clock(clock),
+    .data_a(8'h00),  // No need for data inputs since we're only reading
+    .data_b(8'h00),
+    .wren_a(1'b0),   // Disable write
+    .wren_b(1'b0),
+    .q_a(q_a),
+    .q_b(q_b)
+  );
+
+  // Clock generation
+  always #5 clock = ~clock;
+
+  // Testbench logic
+  initial begin
+    // Initialize inputs
+    clock = 0;
+    address_a = 0;
+    address_b = 0;
+
+    // Wait for global reset
+    #10;
+
+    // Test reading from port A and B at different addresses
+    // Assume memory has been initialized with some values in a .mif file
+    
+    // Read from address 1 on port A
+    address_a = 19'h00001;
+    #10;
+    $display("Read from port A, address 1: %h", q_a);
+
+    // Read from address 2 on port B
+    address_b = 19'h00002;
+    #10;
+    $display("Read from port B, address 2: %h", q_b);
+
+    // Read from address 3 on port A
+    address_a = 19'h00003;
+    #10;
+    $display("Read from port A, address 3: %h", q_a);
+
+    // Read from address 4 on port B
+    address_b = 19'h00004;
+    #10;
+    $display("Read from port B, address 4: %h", q_b);
+
+    // Finish the simulation
+    $stop;
+  end
+
+endmodule

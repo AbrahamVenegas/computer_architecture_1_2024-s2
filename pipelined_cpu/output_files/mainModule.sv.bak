@@ -1,0 +1,12 @@
+module mainModule(input  logic clk,
+	 output logic clk_25,
+    output logic vga_hsync, vga_vsync, sync_blank, sync_b,
+    output logic [7:0] red, green, blue);
+	 
+	
+	 VGA_Main_Module vga(
+    .clk(clk),
+	 output logic clk_25,
+    output logic vga_hsync, vga_vsync, sync_blank, sync_b,
+    output logic [7:0] red, green, blue
+    );
