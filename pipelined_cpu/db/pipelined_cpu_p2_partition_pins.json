@@ -4,263 +4,175 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "WriteDataM[0]",
+					"name" : "vga_hsync",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[1]",
+					"name" : "vga_vsync",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[2]",
+					"name" : "clk_25",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[3]",
+					"name" : "red[0]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[4]",
+					"name" : "red[1]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[5]",
+					"name" : "red[2]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[6]",
+					"name" : "red[3]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[7]",
+					"name" : "red[4]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[8]",
+					"name" : "red[5]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[9]",
+					"name" : "red[6]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[10]",
+					"name" : "red[7]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[11]",
+					"name" : "green[0]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[12]",
+					"name" : "green[1]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[13]",
+					"name" : "green[2]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[14]",
+					"name" : "green[3]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[15]",
+					"name" : "green[4]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[16]",
+					"name" : "green[5]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[17]",
+					"name" : "green[6]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[18]",
+					"name" : "green[7]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[19]",
+					"name" : "blue[0]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[20]",
+					"name" : "blue[1]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[21]",
+					"name" : "blue[2]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[22]",
+					"name" : "blue[3]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[23]",
+					"name" : "blue[4]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[24]",
+					"name" : "blue[5]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[25]",
+					"name" : "blue[6]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[26]",
+					"name" : "blue[7]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[27]",
+					"name" : "addr_tst_ms[0]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[28]",
+					"name" : "addr_tst_ms[1]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[29]",
+					"name" : "addr_tst_ms[2]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[30]",
+					"name" : "addr_tst_ms[3]",
 					"strict" : false
 				},
 				{
-					"name" : "WriteDataM[31]",
+					"name" : "addr_tst_ms[4]",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[0]",
+					"name" : "addr_tst_ms[5]",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[1]",
+					"name" : "addr_tst_ms[6]",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[2]",
+					"name" : "add_tst_ls[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[3]",
+					"name" : "add_tst_ls[1]",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[4]",
+					"name" : "add_tst_ls[2]",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[5]",
+					"name" : "add_tst_ls[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[6]",
+					"name" : "add_tst_ls[4]",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[7]",
+					"name" : "add_tst_ls[5]",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[8]",
+					"name" : "add_tst_ls[6]",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[9]",
+					"name" : "selection_done",
 					"strict" : false
 				},
 				{
-					"name" : "DataAdrM[10]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[11]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[12]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[13]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[14]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[15]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[16]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[17]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[18]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[19]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[20]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[21]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[22]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[23]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[24]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[25]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[26]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[27]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[28]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[29]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[30]",
-					"strict" : false
-				},
-				{
-					"name" : "DataAdrM[31]",
-					"strict" : false
-				},
-				{
-					"name" : "MemWriteM",
+					"name" : "mode",
 					"strict" : false
 				},
 				{
@@ -268,7 +180,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "select_btn",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "up_btn",
+					"strict" : false
+				},
+				{
+					"name" : "down_btn",
 					"strict" : false
 				}
 			]

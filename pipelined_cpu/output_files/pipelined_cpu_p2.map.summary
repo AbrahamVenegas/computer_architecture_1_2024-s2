@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Oct 15 23:34:49 2024
-Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Lite Edition
+Analysis & Synthesis Status : Successful - Sun Oct 20 22:16:41 2024
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : pipelined_cpu_p2
-Top-level Entity Name : top
+Top-level Entity Name : mainModule
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 765
-Total pins : 67
+Total registers : 819
+Total pins : 50
 Total virtual pins : 0
-Total block memory bits : 0
-Total DSP Blocks : 2
+Total block memory bits : 4,227,072
+Total DSP Blocks : 7
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
 Total HSSI TX PCSs : 0

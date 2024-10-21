@@ -23,14 +23,25 @@ module mainModule(input  logic clk, rst,
 	 
 	 logic cpu_wren_signal = 0;
 	 logic selection_wren_signal;
-	 logic [18:0] cpu_address_signal = 19'h30E50;
-	 logic [18:0] selection_address_signal;
-	 logic [7:0] cpu_data_a_signal;
-	 logic [7:0] selection_data_a_signal;
-	 logic prev_up, prev_down;
-	 
-	 
-	 ram	ram_inst (
+	 //logic [18:0] cpu_address_signal = 19'h30E50;
+	 logic [18:0] 		cpu_address_signal = 19'h4;
+	 logic [18:0] 		selection_address_signal;
+	 logic [7:0] 		cpu_data_a_signal;
+	 logic [7:0] 		selection_data_a_signal;
+	 logic 				prev_up, prev_down;
+	 logic [9:0] 		instr_address_signal = 10'H01;
+	 logic [31:0] 		fetched_instruction_signal;
+	 cpu cpu(
+		.clk(clk), 
+		.reset(rst), 
+		.PCF(instr_address_signal), //instr addr 
+		.InstrF(fetched_instruction_signal), //instr
+		.MemWriteM(cpu_wren_signal), //wren
+		.ALUOutM(cpu_address_signal), 	//data addr
+		.WriteDataM(cpu_data_a_signal), //data to write
+		.ReadDataM(selection_data_a_signal)	//dato en memoria
+		);
+	 ram	ram_data (
 		 .address_a ( address_a_sig ),
 		 .address_b ( address_b_sig ),
 		 .clock ( clk ),
@@ -40,6 +51,13 @@ module mainModule(input  logic clk, rst,
 		 .wren_b ( 1'h00 ),
 		 .q_a(q_a_sig),
 		 .q_b ( q_b_sig )
+	);
+	
+	
+	rom rom_inst(
+		.address(instr_address_signal),
+		.clock(clk),
+		.q(fetched_instruction_signal)
 	);
 	
 	 VGA_Main_Module vga(
@@ -108,7 +126,7 @@ module mainModule(input  logic clk, rst,
 		.data_out(wren_a_sig)
 		);
 	binary_to_7seg bch(
-    .binary_in(q_a_sig),  // 8-bit binary input
+    .binary_in(fetched_instruction_signal[7:0]),  // 8-bit binary input
     .seg_h(addr_tst_ms),      // 7-segment output for higher nibble
     .seg_l(add_tst_ls)       // 7-segment output for lower nibble
 );
