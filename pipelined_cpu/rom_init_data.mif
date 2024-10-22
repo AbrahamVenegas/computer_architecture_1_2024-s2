@@ -1,10 +1,10 @@
 -- Copyright (C) 2020  Intel Corporation. All rights reserved.
--- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and any partner logic 
--- functions, and any output files from any of the foregoing 
--- (including device programming or simulation files), and any 
--- associated documentation or information are expressly subject 
--- to the terms and conditions of the Intel Program License 
+-- Your use of Intel Corporation's design tools, logic functions
+-- and other software and tools, and any partner logic
+-- functions, and any output files from any of the foregoing
+-- (including device programming or simulation files), and any
+-- associated documentation or information are expressly subject
+-- to the terms and conditions of the Intel Program License
 -- Subscription Agreement, the Intel Quartus Prime License Agreement,
 -- the Intel FPGA IP License Agreement, or other applicable license
 -- agreement, including, without limitation, that your use is for
@@ -22,6 +22,13 @@ ADDRESS_RADIX=HEX;
 DATA_RADIX=HEX;
 
 CONTENT BEGIN
-	00000  :  5F9912AA;
-	00001  :  CAFECAFE;
+	00000  :  E5801000;
+	00001  :  E5902000;
+	00002  :  E5C03000;
+	00003  :  E5D04000;
+	00004  :  E5805004;
+	00005  :  E5906004;
+	00006  :  E5C07001;
+	00007  :  E5D08001;
+	00008  :  EAFFFFFE;
 END;

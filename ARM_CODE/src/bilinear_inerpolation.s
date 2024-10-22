@@ -1,20 +1,13 @@
-.global main
-
-.equ    IMAGE_SIZE,     10000
-.equ    IMP_IMAGE,     40000
-
-
 .section .data
-    interp_matrix:   .byte   16 //0x30D40
-    esquina_si:      .byte   0 //0x30E40
-    esquina_sd:      .byte   0 //0x30E44
-    esquina_ii:      .byte   0 //0x30E48
-    esquina_id:      .byte   0 //0x30E4C
-    src_image_addr:  .word   0 //0x30E50
-
-
-    src_image:      .space   IMAGE_SIZE //[0x30E50]
-    improved_image: .space   IMP_IMAGE              //0x27100
+    src_image:      .space   10000 //[0x30E50]
+    improved_image: .space   40000 //0x27100
+    interp_matrix:   .space  16 //0x4e20
+    esquina_si:      .byte   0 //0x4e30
+    esquina_sd:      .byte   0 //0x4e31
+    esquina_ii:      .byte   0 //0x4e32
+    esquina_id:      .byte   0 //0x4e33
+    src_image_addr:  .word   0 //0x4e34
+    
 .section .text
 
 _start: 

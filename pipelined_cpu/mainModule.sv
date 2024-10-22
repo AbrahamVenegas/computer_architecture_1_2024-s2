@@ -11,11 +11,11 @@ module mainModule(input  logic clk, rst,
 	 logic [8:0] 	v_offset;
 	 logic [8:0]	h_offset;
 	 logic [18:0] 	address_b_sig;
-	 logic [18:0] 	address_a_sig;
+	 logic [31:0] 	address_a_sig;
 	 logic			wren_a_sig;
-	 logic [7:0]	data_a_signal;
+	 logic [31:0]	data_a_signal;
 	 logic [7:0] 	q_b_sig;
-	 logic [7:0] 	q_a_sig;
+	 logic [31:0] 	q_a_sig;
 	 logic [18:0]	selection_addr_data;
 	 logic [31:0]	selection_addr_data_LE_32bit;
 	 logic 			selection_wren;
@@ -24,9 +24,9 @@ module mainModule(input  logic clk, rst,
 	 logic cpu_wren_signal = 0;
 	 logic selection_wren_signal;
 	 //logic [18:0] cpu_address_signal = 19'h30E50;
-	 logic [18:0] 		cpu_address_signal = 19'h4;
+	 logic [31:0] 		cpu_address_signal;
 	 logic [18:0] 		selection_address_signal;
-	 logic [7:0] 		cpu_data_a_signal;
+	 logic [31:0] 		cpu_data_a_signal;
 	 logic [7:0] 		selection_data_a_signal;
 	 logic 				prev_up, prev_down;
 	 logic [9:0] 		instr_address_signal = 10'H01;
@@ -41,8 +41,8 @@ module mainModule(input  logic clk, rst,
 		.WriteDataM(cpu_data_a_signal), //data to write
 		.ReadDataM(selection_data_a_signal)	//dato en memoria
 		);
-	 ram	ram_data (
-		 .address_a ( address_a_sig ),
+	 ram_32bit	ram_data (
+		 .address_a ( address_a_sig / 4 ),
 		 .address_b ( address_b_sig ),
 		 .clock ( clk ),
 		 .data_a ( data_a_signal ),
@@ -55,7 +55,7 @@ module mainModule(input  logic clk, rst,
 	
 	
 	rom rom_inst(
-		.address(instr_address_signal),
+		.address(instr_address_signal >> 2),
 		.clock(clk),
 		.q(fetched_instruction_signal)
 	);
@@ -106,21 +106,21 @@ module mainModule(input  logic clk, rst,
 	 );
 	 
 	 Mux2to1 #(19)ram_address_a_mux(
-		.sel(mode),
+		.sel(1'b1),
 		.In_0(selection_address_signal),
 		.In_1(cpu_address_signal),
 		.data_out(address_a_sig)
 		);
 	 
-	 Mux2to1 #(8) ram_writedata_a_mux(
-		.sel(mode),
+	 Mux2to1 #(32) ram_writedata_a_mux(
+		.sel(1'b1),
 		.In_0(selection_data_a_signal),
 		.In_1(cpu_data_a_signal),
 		.data_out(data_a_signal)
 		);
 	 
 	 Mux2to1 #(1) ram_write_enables_mux(
-		.sel(mode),
+		.sel(1'b1),
 		.In_0(selection_wren_signal),
 		.In_1(cpu_wren_signal),
 		.data_out(wren_a_sig)

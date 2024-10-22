@@ -9,137 +9,324 @@
 # Copying /home/abner/intelFPGA/20.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v}
+# vlog -vlog01compat -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram_32bit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:12 on Oct 20,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram.v 
-# -- Compiling module ram
+# Start time: 16:19:38 on Oct 22,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram_32bit.v 
+# -- Compiling module ram_32bit
 # 
 # Top level modules:
-# 	ram
-# End time: 01:55:12 on Oct 20,2024, Elapsed time: 0:00:00
+# 	ram_32bit
+# End time: 16:19:38 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv}
+# vlog -vlog01compat -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/rom.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:12 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv 
-# -- Compiling module mainModule
-# ** Warning: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv(40): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# Start time: 16:19:38 on Oct 22,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/rom.v 
+# -- Compiling module rom
 # 
 # Top level modules:
-# 	mainModule
-# End time: 01:55:12 on Oct 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 1
-# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:12 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv 
-# -- Compiling module VGA_Main_Module
-# 
-# Top level modules:
-# 	VGA_Main_Module
-# End time: 01:55:12 on Oct 20,2024, Elapsed time: 0:00:00
+# 	rom
+# End time: 16:19:38 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv}
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/binary_to_7seg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:13 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv 
-# -- Compiling module GraphicsController
+# Start time: 16:19:38 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/binary_to_7seg.sv 
+# -- Compiling module binary_to_7seg
 # 
 # Top level modules:
-# 	GraphicsController
-# End time: 01:55:13 on Oct 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:13 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv 
-# -- Compiling module pll
-# 
-# Top level modules:
-# 	pll
-# End time: 01:55:13 on Oct 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:13 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv 
-# -- Compiling module ImageDrawer
-# 
-# Top level modules:
-# 	ImageDrawer
-# End time: 01:55:13 on Oct 20,2024, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:13 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv 
-# -- Compiling module upDownCounter
-# 
-# Top level modules:
-# 	upDownCounter
-# End time: 01:55:13 on Oct 20,2024, Elapsed time: 0:00:00
+# 	binary_to_7seg
+# End time: 16:19:38 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:13 on Oct 20,2024
+# Start time: 16:19:38 on Oct 22,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv 
 # -- Compiling module FSM
 # 
 # Top level modules:
 # 	FSM
-# End time: 01:55:13 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:13 on Oct 20,2024
+# Start time: 16:19:39 on Oct 22,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv 
 # -- Compiling module Mux2to1
 # 
 # Top level modules:
 # 	Mux2to1
-# End time: 01:55:13 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:39 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/GraphicsController.sv 
+# -- Compiling module GraphicsController
+# 
+# Top level modules:
+# 	GraphicsController
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:39 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/VGA_Main_Module.sv 
+# -- Compiling module VGA_Main_Module
+# 
+# Top level modules:
+# 	VGA_Main_Module
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:39 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ImageDrawer.sv 
+# -- Compiling module ImageDrawer
+# 
+# Top level modules:
+# 	ImageDrawer
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:13 on Oct 20,2024
+# Start time: 16:19:39 on Oct 22,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/write_32bit_to_ip_ram.sv 
 # -- Compiling module write_32bit_to_ip_ram
 # 
 # Top level modules:
 # 	write_32bit_to_ip_ram
-# End time: 01:55:13 on Oct 20,2024, Elapsed time: 0:00:00
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files/binary_to_7seg.sv}
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:13 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/output_files/binary_to_7seg.sv 
-# -- Compiling module binary_to_7seg
+# Start time: 16:19:39 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/pll.sv 
+# -- Compiling module pll
 # 
 # Top level modules:
-# 	binary_to_7seg
-# End time: 01:55:13 on Oct 20,2024, Elapsed time: 0:00:00
+# 	pll
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv}
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 01:55:13 on Oct 20,2024
-# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv 
-# -- Compiling module mainModule_tb
+# Start time: 16:19:39 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv 
+# -- Compiling module mainModule
+# ** Warning: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv(51): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
-# 	mainModule_tb
-# End time: 01:55:13 on Oct 20,2024, Elapsed time: 0:00:00
+# 	mainModule
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:39 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv 
+# -- Compiling module upDownCounter
+# 
+# Top level modules:
+# 	upDownCounter
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mux3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:39 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mux3.sv 
+# -- Compiling module mux3
+# 
+# Top level modules:
+# 	mux3
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:39 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mux2.sv 
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/flipfloprc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:39 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/flipfloprc.sv 
+# -- Compiling module flipfloprc
+# 
+# Top level modules:
+# 	flipfloprc
+# End time: 16:19:39 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/flipflopr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:39 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/flipflopr.sv 
+# -- Compiling module flipflopr
+# 
+# Top level modules:
+# 	flipflopr
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/flipflopenrc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/flipflopenrc.sv 
+# -- Compiling module flipflopenrc
+# 
+# Top level modules:
+# 	flipflopenrc
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/flipflopenr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/flipflopenr.sv 
+# -- Compiling module flipflopenr
+# 
+# Top level modules:
+# 	flipflopenr
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/eqcmp.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/eqcmp.sv 
+# -- Compiling module eqcmp
+# 
+# Top level modules:
+# 	eqcmp
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/extend.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/extend.sv 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/regfile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/hazard.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/hazard.sv 
+# -- Compiling module hazard
+# 
+# Top level modules:
+# 	hazard
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/conditional.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/conditional.sv 
+# -- Compiling module conditional
+# 
+# Top level modules:
+# 	conditional
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 16:19:40 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/cpu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:40 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/cpu.sv 
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# End time: 16:19:41 on Oct 22,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  mainModule_tb
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" mainModule_tb 
-# Start time: 01:55:13 on Oct 20,2024
+# vlog -sv -work work +incdir+/home/abner/Desktop/Arqui\ 1/Proyecto\ Arqui\ 1/computer_architecture_1_2024-s2/pipelined_cpu {/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/processor_tb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 16:19:41 on Oct 22,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu" /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/processor_tb.sv 
+# -- Compiling module processor_tb
+# 
+# Top level modules:
+# 	processor_tb
+# End time: 16:19:41 on Oct 22,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  processor_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" processor_tb 
+# Start time: 16:19:41 on Oct 22,2024
 # Loading sv_std.std
-# Loading work.mainModule_tb
+# Loading work.processor_tb
 # Loading work.mainModule
-# Loading work.ram
+# Loading work.cpu
+# Loading work.controller
+# Loading work.flipfloprc
+# Loading work.flipflopr
+# Loading work.conditional
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.flipflopenr
+# Loading work.adder
+# Loading work.flipflopenrc
+# Loading work.regfile
+# Loading work.extend
+# Loading work.mux3
+# Loading work.alu
+# Loading work.eqcmp
+# Loading work.hazard
+# Loading work.ram_32bit
 # Loading altera_mf_ver.altsyncram
+# Loading work.rom
 # Loading work.VGA_Main_Module
 # Loading work.pll
 # Loading work.ImageDrawer
@@ -152,15 +339,18 @@
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 15, found 12.
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv Line: 12
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'addr_tst_ms'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'add_tst_ls'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'selection_done'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'reset_n'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/quadrantCounter File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 61
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'rst'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/control File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (10) for port 'PCF'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/cpu.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/cpu File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 34
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'ReadDataM'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/cpu.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/cpu File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 34
+# ** Warning: (vsim-3015) [PCDPC] - Port size (17) does not match connection size (32) for port 'address_a'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram_32bit.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/ram_data File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (32) for port 'In_1'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/ram_address_a_mux File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (32) for port 'data_out'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/ram_address_a_mux File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'In_0'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/ram_writedata_a_mux File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 115
 # 
 # add wave *
 # view structure
@@ -168,158 +358,25 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-add wave -position end  sim:/mainModule_tb/uut/control/state
-add wave -position end  sim:/mainModule_tb/uut/control/write
-add wave -position end  sim:/mainModule_tb/uut/control/mode
-# Time: 0, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 20, up_btn: 0, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 40, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 80, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 100, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 140, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 160, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 200, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 220, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# ** Note: $stop    : /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(54)
-#    Time: 320 ns  Iteration: 0  Instance: /mainModule_tb
-# Break in Module mainModule_tb at /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv line 54
-# Can't move the Now cursor.
-# Can't move the Now cursor.
-add wave -position end  sim:/mainModule_tb/uut/selection_write/data_in
-add wave -position end  sim:/mainModule_tb/uut/selection_write/address
-add wave -position end  sim:/mainModule_tb/uut/selection_write/write_enable
-add wave -position end  sim:/mainModule_tb/uut/selection_write/clk
-add wave -position end  sim:/mainModule_tb/uut/selection_write/done
-add wave -position end  sim:/mainModule_tb/uut/selection_write/ram_address
-add wave -position end  sim:/mainModule_tb/uut/selection_write/ram_writedata
-add wave -position end  sim:/mainModule_tb/uut/selection_write/ram_write_enable
-add wave -position end  sim:/mainModule_tb/uut/selection_write/byte_counter
+add wave -position end  sim:/processor_tb/dut/cpu/dp/rf/rd2
+# ** Note: $stop    : /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/processor_tb.sv(74)
+#    Time: 20100 ns  Iteration: 0  Instance: /processor_tb
+# Break in Module processor_tb at /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/processor_tb.sv line 74
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 15, found 12.
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv Line: 12
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'addr_tst_ms'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'add_tst_ls'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'selection_done'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'reset_n'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/quadrantCounter File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 61
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'rst'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/control File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 69
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (10) for port 'PCF'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/cpu.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/cpu File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 34
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'ReadDataM'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/cpu.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/cpu File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 34
+# ** Warning: (vsim-3015) [PCDPC] - Port size (17) does not match connection size (32) for port 'address_a'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/ram_32bit.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/ram_data File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 44
+# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (32) for port 'In_1'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/ram_address_a_mux File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (19) does not match connection size (32) for port 'data_out'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv(5).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/ram_address_a_mux File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 108
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (8) for port 'In_0'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/Mux2to1.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/ram_writedata_a_mux File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 115
 run -all
-# Time: 0, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 20, up_btn: 0, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 40, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 80, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 100, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 140, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 160, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 200, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 220, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# ** Note: $stop    : /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(54)
-#    Time: 320 ns  Iteration: 0  Instance: /mainModule_tb
-# Break in Module mainModule_tb at /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv line 54
-add wave -position end  sim:/mainModule_tb/uut/selection_addr_data
-add wave -position end  sim:/mainModule_tb/uut/selection_addr_data_LE_32bit
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 15, found 12.
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv Line: 12
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'addr_tst_ms'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'add_tst_ls'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'selection_done'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'reset_n'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/quadrantCounter File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 61
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'rst'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/control File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 69
-run -all
-# Time: 0, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 20, up_btn: 0, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 40, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 80, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 100, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 140, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 160, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 200, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 220, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# ** Note: $stop    : /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(54)
-#    Time: 320 ns  Iteration: 0  Instance: /mainModule_tb
-# Break in Module mainModule_tb at /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv line 54
-add wave -position end  sim:/mainModule_tb/uut/v_offset
-add wave -position end  sim:/mainModule_tb/uut/h_offset
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 15, found 12.
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv Line: 12
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'addr_tst_ms'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'add_tst_ls'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'selection_done'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'reset_n'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/quadrantCounter File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 61
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'rst'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/control File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 69
-run -all
-# Time: 0, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 20, up_btn: 0, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 40, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 80, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 100, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 140, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 160, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 200, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 220, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# ** Note: $stop    : /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(54)
-#    Time: 320 ns  Iteration: 0  Instance: /mainModule_tb
-# Break in Module mainModule_tb at /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv line 54
-add wave -position end  sim:/mainModule_tb/uut/SELECTION_ADDR_DATA_ADDR
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 15, found 12.
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv Line: 12
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'addr_tst_ms'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'add_tst_ls'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'selection_done'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'reset_n'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/quadrantCounter File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 61
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'rst'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/control File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 69
-run -all
-# Time: 0, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 20, up_btn: 0, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 40, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 80, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 100, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 140, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 160, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 200, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 220, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# ** Note: $stop    : /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(54)
-#    Time: 320 ns  Iteration: 0  Instance: /mainModule_tb
-# Break in Module mainModule_tb at /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv line 54
-add wave -position 28  sim:/mainModule_tb/uut/quadrant
-restart -f
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'uut'.  Expected 15, found 12.
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv Line: 12
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'addr_tst_ms'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'add_tst_ls'.
-# ** Warning: (vsim-3722) /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(12): [TFMPC] - Missing connection for port 'selection_done'.
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'reset_n'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/upDownCounter.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/quadrantCounter File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 61
-# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'rst'. The port definition is at: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/FSM.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /mainModule_tb/uut/control File: /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule.sv Line: 69
-run -all
-# Time: 0, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 20, up_btn: 0, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 40, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 80, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 100, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 140, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 160, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# Time: 200, up_btn: 1, select_btn: 0, red: 00, green: 00, blue: 00
-# Time: 220, up_btn: 1, select_btn: 1, red: 00, green: 00, blue: 00
-# ** Note: $stop    : /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv(54)
-#    Time: 320 ns  Iteration: 0  Instance: /mainModule_tb
-# Break in Module mainModule_tb at /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/mainModule_tb.sv line 54
-# WARNING: No extended dataflow license exists
-# End time: 02:19:07 on Oct 20,2024, Elapsed time: 0:23:54
-# Errors: 0, Warnings: 6
+# ** Note: $stop    : /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/processor_tb.sv(74)
+#    Time: 20100 ns  Iteration: 0  Instance: /processor_tb
+# Break in Module processor_tb at /home/abner/Desktop/Arqui 1/Proyecto Arqui 1/computer_architecture_1_2024-s2/pipelined_cpu/processor_tb.sv line 74
