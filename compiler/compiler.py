@@ -30,30 +30,17 @@ cond = {
     "al": "1110",
 }
 
-# data processing intrucctions
-data_instructions = {
-    "SUMA": "0100",
-    "COMP": "1010",
-    "MOVE": "1101",
-    "SUST": "0010",
-    "DIVI": "1101"
-}
-
-# memory intrucctions
-memory_instructions = {
-    "sSTRtw": "00",
-    "LDR": "01",
-    "PUSH": "10",
-    "POP": "11"
-}
-
-# branch intrucctions
-branch_instructions = {
-    "SALT": "1110",
-    "SYCA": "1110",
-    "SYEN": "1110",
-    "SMEI": "1101",
-    "SMAI": "1010"
+labels = {
+"_start": "000000000",
+"_loopImage" : "0000000004",
+"_curr2x2row": "0000000008",
+"_continueLoop" : "000000000C",
+"_intrMatrixCalculation" : "0000000010",
+"_sides"   : "0000000014",
+"_interior" : "0000000018",
+"_esquinas" : "000000001C",
+"_matrixToImage" : "0000000020",
+"_interpolationForNM" : "0000000024",
 }
 
 program_filepath = sys.argv[1]
@@ -81,11 +68,7 @@ for line in program_lines:
 
     # Check if the line contains a label (starts with _)
     if line.startswith("_"):
-        label = line.split(":")[0].strip()  # Extract label
-        program.append(label)  # Save the label
-        # Keep the rest of the line after the label (if there's code after the label)
-        if ":" in line:
-            line = line.split(":")[1].strip()
+        continue
 
     # Reemplazar comas con espacios para dividir correctamente
     line = line.replace(",", " ")
@@ -175,82 +158,12 @@ print("Parsed Program:", program)
 def encode_instruction_from_parsed(parsed_program):
     encoded_program = []
 
-    # Iterate over the parsed instructions
     i = 0
     while i < len(parsed_program):
         instruction = parsed_program[i]
 
-        if instruction in ["SUMA", "SUST", "COMP", "MOVE"]:
-            # Next elements are registers/operands
-            if len(parsed_program) > i + 3:
-                operands = parsed_program[i + 1:i + 4]
-                encoded_instruction = encode_instruction(instruction, operands)
-                if encoded_instruction:
-                    encoded_program.append(encoded_instruction)
-                i += 4  # Move to the next instruction (opcode + 3 operands)
-            else:
-                print(f"[ERROR] Not enough operands for instruction {instruction}")
-                i += 1  # Skip to the next instruction
-
-        # Handle branch or other instructions similarly by adding cases here...
-        
-        else:
-            # Unrecognized instruction
-            print(f"[ERROR] Unsupported instruction: {instruction}")
-            i += 1  # Move to the next item
-
-    return encoded_program
-
-
-def encode_instruction_from_parsed(parsed_program):
-    encoded_program = []
-
-    i = 0
-    while i < len(parsed_program):
-        instruction = parsed_program[i]
-
-        if instruction in ["SUMA", "SUST", "COMP", "MOVE"]:
-            if len(parsed_program) > i + 3:
-                operands = parsed_program[i + 1:i + 4]
-
-                # Handle Immediate values (starting with #)
-                operands = [
-                    operand[1:] if operand.startswith("#") else operand
-                    for operand in operands
-                ]
-
-                # Check if operands are valid (either registers or immediates)
-                valid_operands = [
-                    operand in registers or operand.isdigit() for operand in operands
-                ]
-
-                if all(valid_operands):
-                    encoded_instruction = encode_instruction(instruction, operands)
-                    if encoded_instruction:
-                        encoded_program.append(encoded_instruction)
-                else:
-                    print(f"[ERROR] Invalid operand in: {operands}")
-
-                i += 4  # Move to the next instruction (opcode + 3 operands)
-            else:
-                print(f"[ERROR] Not enough operands for instruction {instruction}")
-                i += 1  # Skip to the next instruction
-
-        else:
-            print(f"[ERROR] Unsupported instruction: {instruction}")
-            i += 1  # Move to the next item
-
-    return encoded_program
-
-
-def encode_instruction_from_parsed(parsed_program):
-    encoded_program = []
-
-    i = 0
-    while i < len(parsed_program):
-        instruction = parsed_program[i]
-
-        if instruction in ["SUMA", "SUST", "COMP", "MOVE"]:
+        if instruction in ["SUMA", "SUST", "COMP", "MOVE", "DIVI", "MULT",
+                           "SALT", "SYCA", "SYEN", "SMEI", "SMAI", "STOR", "LOAD", "PUSH", "REST"]:
             if instruction == "SUMA":
                 # Check whether it's an immediate or register-based SUMA
                 if "#" in parsed_program[i + 3]:
@@ -264,14 +177,21 @@ def encode_instruction_from_parsed(parsed_program):
                 # MOVE expects 2 operands (Rd, Immediate)
                 operands = parsed_program[i + 1:i + 3]
 
-            elif instruction == "COMP":
+            elif instruction == "COMP" or instruction == "STOR" or instruction == "LOAD":
                 # COMP expects 2 operands (Rn, #Immediate)
                 operands = parsed_program[i + 1:i + 3]
 
-            elif instruction == "SUST":
+            elif instruction == "SUST" or instruction == "DIVI" or instruction == "MULT":
                 # SUST expects 3 register operands (Rd, Rn, Rm)
                 operands = parsed_program[i + 1:i + 4]
 
+            elif instruction == "SALT" or instruction == "SYCA" or instruction == "SYEN" or instruction == "SMEI" or instruction == "SMAI":
+                # Branches expects 1 operand (label or immediate)
+                operands = [parsed_program[i + 1]]
+
+            elif instruction == "PUSH" or instruction == "REST":
+                # PUSH and REST expect a list of registers
+                operands = parsed_program[i + 1:]
             # Handle Immediate values (convert them to integers for encoding)
             operands = [
                 operand[1:] if operand.startswith("#") else operand
@@ -283,10 +203,19 @@ def encode_instruction_from_parsed(parsed_program):
                 operand in registers or operand.isdigit() for operand in operands
             ]
 
+            
+            #valid_labels = [
+            #    operand in labels or operand.isdigit() for operand in operands
+            #]
+            
             if all(valid_operands):
                 encoded_instruction = encode_instruction(instruction, operands)
                 if encoded_instruction:
                     encoded_program.append(encoded_instruction)
+            #elif all(valid_labels):
+            #    encoded_instruction = encode_instruction(instruction, operands)
+            #    if encoded_instruction:
+            #        encoded_program.append(encoded_instruction)
             else:
                 print(f"[ERROR] Invalid operand in: {operands}")
 
@@ -295,8 +224,12 @@ def encode_instruction_from_parsed(parsed_program):
                 i += 3  # MOVE has 2 operands, so skip 3 (opcode + 2 operands)
             elif instruction == "COMP":
                 i += 3 # COMP has 2 operands, so skip 2 (opcode + 1 operand)
+            elif instruction == "COMP" or instruction == "STOR" or instruction == "LOAD":
+                i += 3 # COMP has 2 operands, so skip 2 (opcode + 1 operand)
+            elif instruction == "SALT" or instruction == "SYCA" or instruction == "SYEN" or instruction == "SMEI" or instruction == "SMAI" or instruction == "PUSH" or instruction == "REST":
+                i += 2  # Branches have 1 operand, so skip 2 (opcode + 1 operand)
             else:
-                i += 4  # SUMA, SUST have 3 operands, so skip 4 (opcode + 3 operands)
+                i += 4  # SUMA, SUST, DIVI, MULT have 3 operands, so skip 4 (opcode + 3 operands)
         else:
             print(f"[ERROR] Unsupported instruction: {instruction}")
             i += 1  # Move to the next item
@@ -319,6 +252,37 @@ def encode_instruction(instruction, operands):
     elif instruction == "MOVE":
         opcode = "1101"
         s_bit = "0"
+    elif instruction == "DIVI":
+        opcode = "11111011011"  # Based on UDIV encoding
+        s_bit = "0"
+    elif instruction == "MULT":
+        opcode = "11111011011"  # Based on UDIV encoding
+        s_bit = "0"
+    elif instruction == "SALT":
+        opcode = "11101010"
+        offset = "000000000000000000000000"
+    elif instruction == "SYCA":
+        opcode = "11101011"
+        offset = "000000000000000000000000"
+    elif instruction == "SYEN":
+        opcode = "11100001"
+        offset = "00101111111111110001"
+    elif instruction == "SMEI":
+        opcode = "11011010"
+        offset = "000000000000000000000000"
+    elif instruction == "SMAI":
+        opcode = "10101010"
+        offset = "000000000000000000000000"
+    elif instruction == "STOR":
+        offset = "000000000000"
+        ccode = "0"
+    elif instruction == "LOAD":
+        offset = "000000000000"
+        ccode = "1"
+    elif instruction == "PUSH":
+        ccode = "0"
+    elif instruction == "REST":
+        ccode = "1"
     else:
         print(f"[ERROR] Unsupported instruction: {instruction}")
         return None
@@ -333,16 +297,48 @@ def encode_instruction(instruction, operands):
         # MOVE and COMP have only 2 operands
         Operand2 = format(int(operands[1]), '08b') if operands[1].isdigit() else registers.get(operands[1], None)
     else:
-        # SUMA and SUST expect 3 operands
+        # SUMA, SUST, and DIVI expect 3 operands
         Operand2 = registers.get(operands[2], None) if len(operands) > 2 and operands[2] in registers else format(int(operands[2]), '08b')
 
     if None in [Rn, Rd]:
         print(f"[ERROR] Invalid register encoding in operands: {operands}")
         return None
 
-    binary_instruction = (
-        condition + "00" + i_bit + opcode + s_bit + Rn + Rd + (Operand2 or "0000")
-    )
+    if instruction == "DIVI":
+        # DIVI specific encoding (UDIV pattern)
+        binary_instruction = (
+            opcode + Rn + "1111" + Rd  + "1111"+ (Operand2 or "0000")# Construct the binary string for UDIV
+        )
+    elif instruction == "MULT":
+        # DIVI specific encoding (UDIV pattern)
+        binary_instruction = (
+            condition + "0000000" +  s_bit + Rn + Rd  + (Operand2 or "0000") + "10010000"# Construct the binary string for UDIV
+        )
+    elif instruction in ["SALT", "SYCA", "SMEI", "SMAI"]:
+        # Branch instructions
+        binary_instruction = (
+            opcode + offset
+        )
+    elif instruction == "SYEN":
+        # Branch instructions
+        binary_instruction = (
+            opcode + offset + "0000"
+        )
+    elif instruction in ["PUSH", "REST"]:
+        # PUSH and REST instructions
+        binary_instruction = (
+            condition + "100" + "0" + "0" + "0" + "0" + ccode + "0000" + Rn
+        )
+    elif instruction == "STOR" or instruction == "LOAD":
+        # STOR and LOAD instructions
+        binary_instruction = (
+            condition + "01"  + "0" + "0" + "0" + "0" + ccode+ Rn + Rd + offset 
+        )
+    else:
+        # For other instructions
+        binary_instruction = (
+            condition + "00" + i_bit + opcode + s_bit + Rn + Rd + (Operand2 or "0000")
+        )
 
     hex_instruction = hex(int(binary_instruction, 2))[2:].zfill(8)
     
@@ -351,7 +347,6 @@ def encode_instruction(instruction, operands):
     )
     
     return big_endian_hex
-
 
 
 
