@@ -1,0 +1,557 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/simulation/modelsim
+vadder
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1729671353
+!i10b 1
+!s100 cWDcalMKmcC?1E?@i4]N]1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IhemkSmc4FKm2g_egc:9Ri2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1729654089
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/adder.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/adder.sv
+!i122 0
+L0 1 7
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1729671353.000000
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/adder.sv|
+!i113 1
+Z5 o-sv -work work
+Z6 !s92 -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu
+Z7 tCvgOpt 0
+valu
+R1
+Z8 !s110 1729671354
+!i10b 1
+!s100 MVaZ4_[K00SHjo<SAV7:M2
+R2
+Iea1bRUC0EcTc=c?oJ=CNY2
+R3
+S1
+R0
+w1729669605
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/alu.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/alu.sv
+!i122 1
+L0 1 161
+R4
+r1
+!s85 0
+31
+Z9 !s108 1729671354.000000
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/alu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/alu.sv|
+!i113 1
+R5
+R6
+R7
+vcondcheck
+R1
+R8
+!i10b 1
+!s100 hhST6^E[L:>Z[5eo6TUo_1
+R2
+IPTB3V_2B;Ldd30zbaFZ@80
+R3
+S1
+R0
+w1729654294
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/condcheck.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/condcheck.sv
+!i122 3
+Z10 L0 1 29
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/condcheck.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/condcheck.sv|
+!i113 1
+R5
+R6
+R7
+vcontroller
+R1
+R8
+!i10b 1
+!s100 3_j`F=IMDle5nbYVJ^VJ_2
+R2
+I61fJnZgM_=`Vh<o0_bF3d2
+R3
+S1
+R0
+w1729657839
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/controller.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/controller.sv
+!i122 4
+L0 1 96
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/controller.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/controller.sv|
+!i113 1
+R5
+R6
+R7
+vcpu
+R1
+R8
+!i10b 1
+!s100 foj?M3ID_Hm^JiZKd=8@m2
+R2
+I1YB1Sca@mWSEYaz;^T9ih3
+R3
+S1
+R0
+w1729654277
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/cpu.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/cpu.sv
+!i122 2
+L0 1 44
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/cpu.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/cpu.sv|
+!i113 1
+R5
+R6
+R7
+vdatapath
+R1
+R8
+!i10b 1
+!s100 X]@PE5OMSedbDDQzLI:JB1
+R2
+IQUCB:;KnoMn25f^j`Z4b71
+R3
+S1
+R0
+w1729654339
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/datapath.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/datapath.sv
+!i122 5
+L0 1 116
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/datapath.sv|
+!i113 1
+R5
+R6
+R7
+vdecoder
+R1
+Z11 !s110 1729671355
+!i10b 1
+!s100 =Dmn_QhHQBFl08DE0>9ol2
+R2
+ISekkdSK^hIYALH;VS;17I2
+R3
+S1
+R0
+w1729669291
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/decoder.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/decoder.sv
+!i122 6
+L0 1 90
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/decoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/decoder.sv|
+!i113 1
+R5
+R6
+R7
+vdmem
+R1
+Z12 !s110 1729671356
+!i10b 1
+!s100 l:oIg<b9<n_V@oEc1R;f52
+R2
+IdAheIVl_MoP7V<j08b8lE0
+R3
+S1
+R0
+w1729670023
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/dmem.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/dmem.sv
+!i122 18
+L0 1 60
+R4
+r1
+!s85 0
+31
+Z13 !s108 1729671356.000000
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/dmem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/dmem.sv|
+!i113 1
+R5
+R6
+R7
+vextend
+R1
+R11
+!i10b 1
+!s100 HAiF7n^8i9Fl_?BcjARRT3
+R2
+IXF>`<VJ;LdEAKlSbTbP;71
+R3
+S1
+R0
+w1729654372
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/extend.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/extend.sv
+!i122 7
+L0 1 24
+R4
+r1
+!s85 0
+31
+Z14 !s108 1729671355.000000
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/extend.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/extend.sv|
+!i113 1
+R5
+R6
+R7
+vflopenr
+R1
+R11
+!i10b 1
+!s100 cH7<E_=l=nXihOefCLnkR2
+R2
+IY_o0g:SUWhQEGz:@6;`ab1
+R3
+S1
+R0
+w1729654388
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopenr.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopenr.sv
+!i122 8
+Z15 L0 1 11
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopenr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopenr.sv|
+!i113 1
+R5
+R6
+R7
+vflopfl
+R1
+R11
+!i10b 1
+!s100 mdJjmf@V4U9DFGnW:A`^U0
+R2
+I^iC?b6IT3dDcQViXnaGhd1
+R3
+S1
+R0
+w1729654403
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopfl.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopfl.sv
+!i122 9
+Z16 L0 1 14
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopfl.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopfl.sv|
+!i113 1
+R5
+R6
+R7
+vflopflenr
+R1
+R11
+!i10b 1
+!s100 W=aM>567ZRBdT3kzkfgh`2
+R2
+IbN?zaI?IN742k;1f=QAYY2
+R3
+S1
+R0
+w1729654420
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopflenr.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopflenr.sv
+!i122 10
+R16
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopflenr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopflenr.sv|
+!i113 1
+R5
+R6
+R7
+vflopr
+R1
+R11
+!i10b 1
+!s100 9VmS>P0KQPo2fchzFL`BK0
+R2
+I=<67T1USRkLJe3klHKbZ;0
+R3
+S1
+R0
+w1729654435
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopr.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopr.sv
+!i122 11
+R15
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopr.sv|
+!i113 1
+R5
+R6
+R7
+vhazardunit
+R1
+R11
+!i10b 1
+!s100 kZjJ2E8f0:zLTk<Z8Pbf_0
+R2
+I@?NGYJUeF0GedCQ<HZFBc3
+R3
+S1
+R0
+w1729654451
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/hazardunit.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/hazardunit.sv
+!i122 12
+R10
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/hazardunit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/hazardunit.sv|
+!i113 1
+R5
+R6
+R7
+vimem
+R1
+R12
+!i10b 1
+!s100 VadWo:4Ul^jE0zHAAM:4`2
+R2
+IBh7T87Az6m5iW0@4mhS`z1
+R3
+S1
+R0
+w1729671262
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/imem.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/imem.sv
+!i122 19
+L0 1 259
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/imem.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/imem.sv|
+!i113 1
+R5
+R6
+R7
+vmux2
+R1
+R11
+!i10b 1
+!s100 chEUMf29dLm;hkSPWAcdA0
+R2
+Ib=3RoQz]`NkXCC7z_hiAC3
+R3
+S1
+R0
+w1729654463
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux2.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux2.sv
+!i122 13
+L0 1 8
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux2.sv|
+!i113 1
+R5
+R6
+R7
+vmux3
+R1
+R11
+!i10b 1
+!s100 gT86kSP;42_@bmfmn3R1_0
+R2
+IV3@6Y_8F;fjz>noXnE@a:0
+R3
+S1
+R0
+w1729654476
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux3.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux3.sv
+!i122 14
+R15
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux3.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux3.sv|
+!i113 1
+R5
+R6
+R7
+vregfile
+R1
+R12
+!i10b 1
+!s100 lH=?m8Tch0=G:WYc[BBLm1
+R2
+IbL3emjiEEjP=LU@BljTYN1
+R3
+S1
+R0
+w1729669341
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/regfile.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/regfile.sv
+!i122 15
+L0 1 23
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/regfile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/regfile.sv|
+!i113 1
+R5
+R6
+R7
+vshift
+R1
+R12
+!i10b 1
+!s100 E9ho0SFcWO4@^_JlS;_Mg2
+R2
+IbdTF6fc70ECL<hJImUM8<2
+R3
+S1
+R0
+w1729654550
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/shift.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/shift.sv
+!i122 16
+L0 1 138
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/shift.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/shift.sv|
+!i113 1
+R5
+R6
+R7
+vtb_top
+R1
+R12
+!i10b 1
+!s100 jQ[FP^kfXaU>ZK36Si`Sd1
+R2
+In=DGbT`kBWcMYb4BNO;cU3
+R3
+S1
+R0
+w1729654737
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv
+!i122 21
+L0 1 52
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv|
+!i113 1
+R5
+R6
+R7
+vtop
+R1
+R12
+!i10b 1
+!s100 8=Big4]LFJFl4RYDV@7JK3
+R2
+ITf^:F<oRAV_ahAm57YTZT3
+R3
+S1
+R0
+w1729669769
+8C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/top.sv
+FC:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/top.sv
+!i122 17
+L0 1 17
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu|C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/top.sv|
+!i113 1
+R5
+R6
+R7

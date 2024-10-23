@@ -1,0 +1,296 @@
+# Reading pref.tcl
+# do five_stage_pipelined_cpu_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:53 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 02:15:53 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:54 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 02:15:54 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/cpu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:54 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/cpu.sv 
+# -- Compiling module cpu
+# 
+# Top level modules:
+# 	cpu
+# End time: 02:15:54 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/condcheck.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:54 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/condcheck.sv 
+# -- Compiling module condcheck
+# 
+# Top level modules:
+# 	condcheck
+# End time: 02:15:54 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:54 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 02:15:54 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:54 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 02:15:54 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/decoder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:54 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 02:15:55 on Oct 23,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/extend.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:55 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/extend.sv 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 02:15:55 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopenr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:55 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 02:15:55 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopfl.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:55 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopfl.sv 
+# -- Compiling module flopfl
+# 
+# Top level modules:
+# 	flopfl
+# End time: 02:15:55 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopflenr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:55 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopflenr.sv 
+# -- Compiling module flopflenr
+# 
+# Top level modules:
+# 	flopflenr
+# End time: 02:15:55 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:55 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/flopr.sv 
+# -- Compiling module flopr
+# 
+# Top level modules:
+# 	flopr
+# End time: 02:15:55 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/hazardunit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:55 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/hazardunit.sv 
+# -- Compiling module hazardunit
+# 
+# Top level modules:
+# 	hazardunit
+# End time: 02:15:55 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:55 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux2.sv 
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# End time: 02:15:55 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:55 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux3.sv 
+# -- Compiling module mux3
+# 
+# Top level modules:
+# 	mux3
+# End time: 02:15:55 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/regfile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:55 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 02:15:56 on Oct 23,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/shift.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:56 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/shift.sv 
+# -- Compiling module shift
+# 
+# Top level modules:
+# 	shift
+# End time: 02:15:56 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:56 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 02:15:56 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/dmem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:56 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/dmem.sv 
+# -- Compiling module dmem
+# 
+# Top level modules:
+# 	dmem
+# End time: 02:15:56 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/imem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:56 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/imem.sv 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 02:15:56 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:56 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv 
+# -- Compiling module tb_top
+# 
+# Top level modules:
+# 	tb_top
+# End time: 02:15:56 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu {C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 02:15:56 on Oct 23,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu" C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv 
+# -- Compiling module tb_top
+# 
+# Top level modules:
+# 	tb_top
+# End time: 02:15:56 on Oct 23,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  tb_top
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" tb_top 
+# Start time: 02:15:56 on Oct 23,2024
+# Loading sv_std.std
+# Loading work.tb_top
+# Loading work.top
+# Loading work.cpu
+# Loading work.controller
+# Loading work.flopflenr
+# Loading work.decoder
+# Loading work.flopfl
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.flopr
+# Loading work.datapath
+# Loading work.mux2
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.mux3
+# Loading work.shift
+# Loading work.alu
+# Loading work.hazardunit
+# Loading work.imem
+# Loading work.dmem
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Simulation failed
+# your score is         15 out of 9
+# ** Note: $stop    : C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv(42)
+#    Time: 165 ps  Iteration: 1  Instance: /tb_top
+# Break in Module tb_top at C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv line 42
+add wave -position end  sim:/tb_top/dut/cpu/Instr
+add wave -position end  sim:/tb_top/dut/cpu/dp/rf/rf
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Simulation failed
+# your score is         15 out of 9
+# ** Note: $stop    : C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv(42)
+#    Time: 165 ps  Iteration: 1  Instance: /tb_top
+# Break in Module tb_top at C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv line 42
+add wave -position end  sim:/tb_top/dut/dmem/rd
+restart -f
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Simulation failed
+# your score is         15 out of 9
+# ** Note: $stop    : C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv(42)
+#    Time: 165 ps  Iteration: 1  Instance: /tb_top
+# Break in Module tb_top at C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/tb_top.sv line 42
+# End time: 02:31:58 on Oct 23,2024, Elapsed time: 0:16:02
+# Errors: 0, Warnings: 0

@@ -1,0 +1,4 @@
+Warning (10273): Verilog HDL warning at decoder.sv(21): extended using "x" or "z" File: C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/decoder.sv Line: 21
+Warning (10273): Verilog HDL warning at decoder.sv(57): extended using "x" or "z" File: C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/decoder.sv Line: 57
+Warning (10273): Verilog HDL warning at extend.sv(20): extended using "x" or "z" File: C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/extend.sv Line: 20
+Warning (10273): Verilog HDL warning at mux3.sv(9): extended using "x" or "z" File: C:/Users/Jose/Desktop/Proyecto_Arqui1/computer_architecture_1_2024-s2/five_stage_pipelined_cpu/mux3.sv Line: 9
