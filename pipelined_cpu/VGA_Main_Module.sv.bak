@@ -1,0 +1,40 @@
+module VGA_Main_Module (
+    input  logic clk,
+	 input  logic [7:0] text_mem   [0:999],
+	 input  logic [7:0] text_color [0:999],
+	 output logic clk_25,
+    output logic vga_hsync, vga_vsync, sync_blank, sync_b,
+    output logic [7:0] red, green, blue
+    
+);
+
+    logic [9:0] hs, vs;
+	
+	 pll vgapll(.refclk(clk), .outclk_0(clk_25));
+	 
+	 GraphicsController controller(
+        .clk_25(clk_25),
+        .vga_hsync(vga_hsync),
+        .vga_vsync(vga_vsync),
+        .sync_blank(sync_blank),
+        .sync_b(sync_b),
+        .hs(hs),
+        .vs(vs)
+    );
+
+    // Instancia del TextDrawer
+    TextDrawer text_drawer(
+        .clk(clk_25),
+        .hs(hs),
+        .vs(vs),
+		  .text_mem(text_mem), // Pasar la memoria de texto
+        .text_color(text_color), // Pasar la memoria de color
+        .red(red),
+        .green(green),
+        .blue(blue)
+    );
+
+endmodule
+
+
+

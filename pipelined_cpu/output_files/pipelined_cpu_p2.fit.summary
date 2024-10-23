@@ -1,0 +1,20 @@
+Fitter Status : Successful - Sun Oct 20 22:22:35 2024
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : pipelined_cpu_p2
+Top-level Entity Name : mainModule
+Family : Cyclone V
+Device : 5CSXFC6D6F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 1,683 / 41,910 ( 4 % )
+Total registers : 879
+Total pins : 50 / 499 ( 10 % )
+Total virtual pins : 0
+Total block memory bits : 4,227,072 / 5,662,720 ( 75 % )
+Total RAM Blocks : 516 / 553 ( 93 % )
+Total DSP Blocks : 7 / 112 ( 6 % )
+Total HSSI RX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
+Total HSSI TX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 9 ( 0 % )
+Total PLLs : 0 / 15 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )

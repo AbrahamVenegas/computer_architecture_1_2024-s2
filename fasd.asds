@@ -1,0 +1,12 @@
+ //check if selection square
+        if ( ( (h_offset <= hs < (h_offset + b_width)) & (v_offset <= vs < (v_offset + s_width))) |
+				 ( (h_offset <= hs < (h_offset + s_width)) & (v_offset <= vs < (v_offset + b_width))) |
+				 ( ((h_offset + s_width - b_width) <= hs < (h_offset + s_width)) & (v_offset <= vs < (v_offset + s_width)) ) |
+				 ( ( h_offset <= hs < (h_offset + s_width)) & ((v_offset + s_width - b_width <= vs < (v_offset + s_width))) )
+				 ) begin
+				red = 255;
+            green = 0;
+            blue = 0;
+        // Check for Image 1
+        end 
+		  else 

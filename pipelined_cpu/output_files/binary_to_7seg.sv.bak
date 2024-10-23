@@ -1,0 +1,24 @@
+module binary_to_7seg (
+    input  logic [7:0] binary_in,  // 8-bit binary input
+    output logic [6:0] seg_h,      // 7-segment output for higher nibble
+    output logic [6:0] seg_l       // 7-segment output for lower nibble
+);
+    
+    logic [3:0] high_nibble;  // Upper 4 bits
+    logic [3:0] low_nibble;   // Lower 4 bits
+    
+    // Split the input byte into two nibbles
+    assign high_nibble = binary_in[7:4];
+    assign low_nibble = binary_in[3:0];
+    
+    // 7-segment decoder for higher nibble
+    always_comb begin
+        case (high_nibble)
+            4'h0: seg_h = 7'b1000000; // "0"
+            4'h1: seg_h = 7'b1111001; // "1"
+            4'h2: seg_h = 7'b0100100; // "2"
+            4'h3: seg_h = 7'b0110000; // "3"
+            4'h4: seg_h = 7'b0011001; // "4"
+            4'h5: seg_h = 7'b0010010; // "5"
+            4'h6: seg_h = 7'b0000010; // "6"
+            4'h7: seg_h = 7'b1111000;

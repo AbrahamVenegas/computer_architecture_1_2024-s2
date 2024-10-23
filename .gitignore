@@ -246,3 +246,39 @@ poetry.toml
 pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,alteraquartusii,c,c++
+# Quartus Project Files
+*.qsf           # Quartus Settings File
+*.qpf           # Quartus Project File
+*.qws           # Quartus Workspace File
+
+# Simulation Files
+*.vcd           # Value Change Dump files
+*.wlf           # ModelSim Waveform files
+*.sim           # Simulation-related files
+
+# Generated Files
+db/             # Database directory
+incremental_db/ # Incremental Database directory
+output_files/   # Output files directory
+simulation/     # Simulation output directory
+
+# Synthesis and Compilation
+*.sdf           # Standard Delay Format files
+*.rpt           # Report files
+
+# Temporary Files
+*.bak           # Backup files
+*.tmp           # Temporary files
+*.log           # Log files
+
+# Project-Specific Files
+*.html          # HTML reports
+*.pdf           # PDF reports
+*.jtag           # JTAG files
+
+# IDE-specific files
+*.vscode/       # Visual Studio Code settings
+.idea/          # JetBrains IDE settings
+
+# User-specific files
+*.backup        # Backup files
