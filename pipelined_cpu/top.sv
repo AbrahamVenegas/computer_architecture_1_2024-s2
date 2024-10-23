@@ -9,14 +9,11 @@ module top(input  logic        clk, reset,
   
   imem imem(PCF, InstrF);
 
-  //dmem dmem(clk, MemWriteM, DataAdrM, WriteDataM, ReadDataM);
-
-/*
-  RAMMemory ram1(
+    RAMMemory ram1(
     .clock(clk),
 	 .wren(MemWriteM),
     .address(DataAdrM),
     .data(WriteDataM),
     .q(ReadDataM)
-  );*/
+  );
 endmodule
